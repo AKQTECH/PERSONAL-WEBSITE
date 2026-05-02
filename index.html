@@ -982,6 +982,96 @@ a { color: inherit; text-decoration: none; }
   .hitmeup-btn { right: 4%; }
   .hitmeup-close { right: calc(4% - 7px); }
 }
+
+/* ===== WORK WITH ME SECTION ===== */
+.whats-next-section {
+  background: var(--blush);
+  padding: 96px 72px;
+}
+.whats-next-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 72px;
+  align-items: start;
+}
+.whats-next-media {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  border: 4px solid #d46da4;
+  background: var(--candy);
+}
+.whats-next-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.media-tag {
+  position: absolute;
+  top: 32px;
+  left: -4px;
+  background: var(--raspberry);
+  color: var(--petal);
+  padding: 14px 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  z-index: 2;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.1);
+}
+.whats-next-text .kicker { color: #d0357f; }
+.whats-next-text .kicker::before,
+.whats-next-text .kicker::after { background: #d0357f; }
+.whats-next-hed {
+  font-family: 'Antonio', sans-serif;
+  font-weight: 700;
+  font-size: clamp(72px, 10vw, 140px);
+  line-height: 0.88;
+  color: #d0357f;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  letter-spacing: -0.02em;
+}
+.whats-next-hed em {
+  font-family: 'Fraunces', serif;
+  font-style: italic;
+  font-weight: 900;
+  color: #d46da4;
+  text-transform: none;
+  display: block;
+  font-size: clamp(40px, 6vw, 80px);
+}
+.whats-next-text p {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.75;
+  color: var(--black);
+  margin-bottom: 20px;
+  max-width: 580px;
+}
+.whats-next-text p.lead {
+  font-size: 18px;
+  font-weight: 500;
+  color: #ba5083;
+  line-height: 1.6;
+  margin-bottom: 28px;
+  padding-left: 16px;
+  border-left: 3px solid #f78bc5;
+}
+.whats-next-text p strong { font-weight: 800; color: var(--raspberry); }
+.whats-next-cta { margin-top: 40px; display: inline-block; }
+@media (max-width: 1024px) {
+  .whats-next-grid { grid-template-columns: 1fr; gap: 48px; }
+  .media-tag { font-size: 11px; padding: 10px 20px; }
+}
+@media (max-width: 768px) {
+  .whats-next-section { padding: 64px 24px; }
+}
 </style>
 </head>
 <body>
@@ -1052,10 +1142,13 @@ a { color: inherit; text-decoration: none; }
       <div class="about-text">
         <div class="kicker">Profile</div>
         <h2 class="about-prehed">Who <span class="warm">dat?</span></h2>
-        <h3 class="about-hed">She grew up in Minneapolis in a tight-knit community of <em>eccentric Liberian immigrants.</em> She writes about them often.</h3>
-        <p>April Korto Quioh is a Liberian-American screenwriter, director, and producer. She's written on NBC's <strong>Brooklyn Nine-Nine</strong> and Hulu's <strong>The Other Black Girl</strong>, was a Co-Executive Producer on Netflix's <strong>Survival of the Thickest</strong>, and a Supervising Producer on Apple TV+'s <strong>Loot</strong>.</p>
-        <p>She wrote, directed, and stars in <strong>Pick Me</strong>, the short film executive produced by <strong>Lilly Wachowski</strong> currently on the festival circuit. She's developing it into a feature-length romantic comedy.</p>
-        <p>She runs <a href="https://palavaproductions.com" target="_blank" rel="noopener" style="color:#e768a7;text-decoration:none;"><strong>Palava Productions</strong></a> with her sister Sameliah. She's based in Los Angeles.</p>
+        <h3 class="about-hed"><em>April Korto Quioh</em> is a celebrated Liberian-American screenwriter, <em>director,</em> comedian, and actress.</h3>
+        <p>She grew up in Minneapolis, Minnesota in a tight-knit community of eccentric Liberian immigrants. She writes about them often.</p>
+        <p>She's currently based in Los Angeles, where she has written on NBC's <a href="https://www.nbc.com/brooklyn-nine-nine" target="_blank" rel="noopener"><strong>Brooklyn Nine-Nine</strong></a> and Hulu's <a href="https://www.hulu.com/series/the-other-black-girl-97e0a1b9-31c0-4e37-9c76-6de1f42b6ddb" target="_blank" rel="noopener"><strong>The Other Black Girl</strong></a>, was a Co-Executive Producer on Netflix's <a href="https://www.netflix.com/title/81478195" target="_blank" rel="noopener"><strong>Survival of the Thickest</strong></a>, and a Supervising Producer on Apple TV+'s <a href="https://tv.apple.com/us/show/loot/umc.cmc.5erbujil1mpazuerhr1udnk45" target="_blank" rel="noopener"><strong>Loot</strong></a>.</p>
+        <p>Recently, she wrote, directed, and starred in her short film <a href="https://pickmemovie.com" target="_blank" rel="noopener" style="color:#e768a7;text-decoration:none;"><strong>Pick Me</strong></a>, Executive Produced by <strong>Lilly Wachowski</strong>, and is now developing it into a feature-length film.</p>
+        <p>She runs a production company called <a href="https://palavaproductions.com" target="_blank" rel="noopener" style="color:#e768a7;text-decoration:none;"><strong>Palava Productions</strong></a> with her best friend, collaborator, and older sister. She could model but she's really more of an intellectual.</p>
+        <p>If you're just like everyone else and can't get enough April, you should read her newsletter, <a href="https://youowemeanapology.substack.com/" target="_blank" rel="noopener" style="color:#e768a7;text-decoration:none;"><strong>You Owe Me An Apology</strong></a>.</p>
+        <p>And if you owe her an apology, be sure to apologize to her ASAP.</p>
       </div>
     </div>
   </section>
@@ -1187,6 +1280,38 @@ a { color: inherit; text-decoration: none; }
     </div>
   </section>
 
+  <!-- HIT ME UP MARQUEE — from v8 -->
+  <a href="#contact" style="display:block; text-decoration:none;">
+  <div class="marquee-strip marquee-strip--hitmeup">
+    <div class="marquee-track">
+      <span>Hit me up</span><span>Hit me up</span><span>Hit me up</span><span>Hit me up</span>
+      <span>Hit me up</span><span>Hit me up</span><span>Hit me up</span><span>Hit me up</span>
+    </div>
+  </div>
+  </a>
+
+  <!-- ON THE HORIZON — Caprasimo heading -->
+  <section class="horizon-section" id="next">
+    <div class="horizon-head">
+      <div class="kicker">On the Horizon</div>
+      <h2 class="horizon-hed">what she's building <em>next &#8594;</em></h2>
+    </div>
+    <div class="horizon-cards">
+      <div class="horizon-card">
+        <h3>Pick Me: The Feature</h3>
+        <p>Now in active development.</p>
+      </div>
+      <div class="horizon-card">
+        <h3>Gramcracker</h3>
+        <p>The original television pilot that started it all.</p>
+      </div>
+      <div class="horizon-card">
+        <h3><a href="https://palavaproductions.com" target="_blank" rel="noopener">Palava Productions</a></h3>
+        <p>Sister-owned. Film, TV, live events. Co-founded with Sameliah Quioh.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- ON THE DAY — from v10, unique photos -->
   <section class="proof-section" id="onset">
     <div class="proof-head">
@@ -1194,10 +1319,6 @@ a { color: inherit; text-decoration: none; }
       <h2 class="proof-hed">On the Day.</h2>
     </div>
     <div class="proof-grid">
-      <div class="proof-tile">
-        <img src="official photos/Lee_Dubin02346.jpg" alt="At the monitor" style="object-position:center 40%">
-        <div class="proof-cap"><strong>The Direction</strong>With the DP at the monitor.</div>
-      </div>
       <div class="proof-tile">
         <img src="official photos/Lee_Dubin4423.jpg" alt="Full crew" style="object-position:center 45%">
         <div class="proof-cap"><strong>The Set</strong>Creating a moment.</div>
@@ -1229,37 +1350,34 @@ a { color: inherit; text-decoration: none; }
     </div>
   </section>
 
-  <!-- ON THE HORIZON — Caprasimo heading -->
-  <section class="horizon-section" id="next">
-    <div class="horizon-head">
-      <div class="kicker">On the Horizon</div>
-      <h2 class="horizon-hed">what she's building <em>next &#8594;</em></h2>
-    </div>
-    <div class="horizon-cards">
-      <div class="horizon-card">
-        <h3>Pick Me: The Feature</h3>
-        <p>Now in active development.</p>
+  <!-- WORK WITH ME -->
+  <section class="whats-next-section" id="workwithme">
+    <div class="whats-next-grid">
+
+      <!-- Left: Media -->
+      <div class="whats-next-media" style="margin-top: 44px;">
+        <img src="official photos/Lee_Dubin02346.jpg" alt="April Korto Quioh with DP Tanmay Chowdhary" style="object-position: 0% 15%;">
+        <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);color:#ffd9f5;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.08em;padding:10px 14px;">making it happen with DP Tanmay Chowdhary</div>
       </div>
-      <div class="horizon-card">
-        <h3>Gramcracker</h3>
-        <p>The original television pilot that started it all.</p>
+
+      <!-- Right: Text Content -->
+      <div class="whats-next-text">
+        <div class="kicker">Work With Me</div>
+        <h2 class="whats-next-hed">WORK WITH <em>me.</em></h2>
+
+        <p class="lead" style="color:#e768a7;">Currently booking: shorts, music videos, experimental storytelling, branded content, and narrative projects that light me up.</p>
+
+        <p>I'm looking to collaborate and tell stories that are full of heart and find levity even in the toughest of moments. In addition to my 10+ years as a professional comedy writer, I bring along with me my lifelong commitment to having a laugh by any means necessary, my careful attention to detail, my improvisational approach to storytelling, and my consistent ability to be a 10/10 hang.</p>
+
+        <p style="color:#e768a7;font-weight:800;">The sky's the limit.</p>
+
+        <div class="whats-next-cta" style="margin-top:4px;">
+          <a href="#contact" class="c6-circuit" style="color:#ffd9f5;">let's get to work</a>
+        </div>
       </div>
-      <div class="horizon-card">
-        <h3><a href="https://palavaproductions.com" target="_blank" rel="noopener">Palava Productions</a></h3>
-        <p>Sister-owned. Film, TV, live events. Co-founded with Sameliah Quioh.</p>
-      </div>
+
     </div>
   </section>
-
-  <!-- HIT ME UP MARQUEE — from v8 -->
-  <a href="#contact" style="display:block; text-decoration:none;">
-  <div class="marquee-strip marquee-strip--hitmeup">
-    <div class="marquee-track">
-      <span>Hit me up</span><span>Hit me up</span><span>Hit me up</span><span>Hit me up</span>
-      <span>Hit me up</span><span>Hit me up</span><span>Hit me up</span><span>Hit me up</span>
-    </div>
-  </div>
-  </a>
 
   <!-- CONTACT — from v7 -->
   <section class="contact-section" id="contact">
