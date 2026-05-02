@@ -3,7 +3,50 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>April Korto Quioh — Writer / Director / Actress</title>
+<title>April Korto Quioh — Comedy Writer, Director & Actress | Los Angeles</title>
+<meta name="description" content="April Korto Quioh is a Liberian-American screenwriter, director, and actress based in Los Angeles. TV credits include Netflix, Apple TV+, Hulu, and NBC. Creator and star of Pick Me, exec produced by Lilly Wachowski.">
+<meta name="keywords" content="April Korto Quioh, comedy writer Los Angeles, TV writer Los Angeles, screenwriter director actress, Liberian American writer, Pick Me short film, Survival of the Thickest writer, Brooklyn Nine-Nine writer, Loot Apple TV writer, The Other Black Girl writer">
+<meta name="author" content="April Korto Quioh">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="April Korto Quioh — Comedy Writer, Director & Actress">
+<meta property="og:description" content="Liberian-American screenwriter, director, and actress based in Los Angeles. Credits include Netflix, Apple TV+, Hulu, and NBC.">
+<meta property="og:url" content="https://aprilkortoquioh.com">
+<meta property="og:image" content="https://aprilkortoquioh.com/official photos/FINAL PICK ME POSTER.jpg">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="April Korto Quioh — Comedy Writer, Director & Actress">
+<meta name="twitter:description" content="Liberian-American screenwriter, director, and actress based in Los Angeles. Credits include Netflix, Apple TV+, Hulu, and NBC.">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "April Korto Quioh",
+  "jobTitle": "Screenwriter, Director, Actress",
+  "description": "Liberian-American screenwriter, director, and actress based in Los Angeles.",
+  "url": "https://aprilkortoquioh.com",
+  "email": "april@aprilkortoquioh.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Los Angeles", "addressRegion": "CA" },
+  "sameAs": [
+    "https://www.imdb.com/name/nm8555752/",
+    "https://palavaproductions.com",
+    "https://youowemeanapology.substack.com/"
+  ],
+  "knowsAbout": ["Screenwriting", "Directing", "Comedy", "Television", "Film"],
+  "worksFor": { "@type": "Organization", "name": "Palava Productions" },
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Writer / Co-Executive Producer", "recognizedBy": { "@type": "Organization", "name": "Netflix — Survival of the Thickest" } },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Writer / Supervising Producer", "recognizedBy": { "@type": "Organization", "name": "Apple TV+ — Loot" } },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Writer / Producer", "recognizedBy": { "@type": "Organization", "name": "Hulu — The Other Black Girl" } },
+    { "@type": "EducationalOccupationalCredential", "credentialCategory": "Writer", "recognizedBy": { "@type": "Organization", "name": "NBC — Brooklyn Nine-Nine" } }
+  ]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='30' fill='%23e768a7'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,6 +107,24 @@ a { color: inherit; text-decoration: none; }
   opacity: 0;
   pointer-events: none;
 }
+.hitmeup-close {
+  position: fixed;
+  top: 3px;
+  right: 13px;
+  z-index: 101;
+  background: none;
+  border: none;
+  color: #e975a8;
+  font-size: 11px;
+  line-height: 1;
+  padding: 2px 5px;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity .2s;
+  font-family: 'DM Sans', sans-serif;
+}
+.hitmeup-close:hover { opacity: 1; }
+.hitmeup-close.dismissed { display: none; }
 
 /* ===== HERO — from v4 layout, adjusted to palette ===== */
 .hero {
@@ -830,7 +891,7 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: #ffd9f5;
-  background: #e768a7;
+  background: #d46ca3;
   padding: 4px 10px;
   margin-top: 24px;
   transition: background .2s;
@@ -884,6 +945,7 @@ a { color: inherit; text-decoration: none; }
 }
 @media (max-width: 768px) {
   .hitmeup-btn { top: 44px; right: 12px; padding: 8px 16px; font-size: 9px; }
+  .hitmeup-close { top: 37px; right: 6px; }
   .hero-photo { top: 28px; left: 28px; right: 28px; bottom: 28px; }
   .hero-left-block { top: 12px; left: 12px; }
   .hero-left-block .hero-credit-name { font-size: 12px; }
@@ -905,6 +967,7 @@ a { color: inherit; text-decoration: none; }
 /* Portrait: hide button, fix name position */
 @media (orientation: portrait) {
   .hitmeup-btn { display: none !important; }
+  .hitmeup-close { display: none !important; }
   .hero-name-wrap {
     bottom: 16px;
     left: 15px;
@@ -917,6 +980,7 @@ a { color: inherit; text-decoration: none; }
 /* Wide screens: move Hit Me Up button in from the edge toward the hero image */
 @media (min-width: 1200px) {
   .hitmeup-btn { right: 4%; }
+  .hitmeup-close { right: calc(4% - 7px); }
 }
 </style>
 </head>
@@ -924,6 +988,7 @@ a { color: inherit; text-decoration: none; }
 
   <!-- HIT ME UP BUTTON — from v7, with swipe-to-dismiss -->
   <a href="#contact" class="hitmeup-btn" id="hitmeup">Hit Me Up</a>
+  <button class="hitmeup-close" id="hitmeup-close" aria-label="Dismiss">×</button>
 
   <!-- HERO — from v4 layout -->
   <section class="hero">
@@ -990,7 +1055,7 @@ a { color: inherit; text-decoration: none; }
         <h3 class="about-hed">She grew up in Minneapolis in a tight-knit community of <em>eccentric Liberian immigrants.</em> She writes about them often.</h3>
         <p>April Korto Quioh is a Liberian-American screenwriter, director, and producer. She's written on NBC's <strong>Brooklyn Nine-Nine</strong> and Hulu's <strong>The Other Black Girl</strong>, was a Co-Executive Producer on Netflix's <strong>Survival of the Thickest</strong>, and a Supervising Producer on Apple TV+'s <strong>Loot</strong>.</p>
         <p>She wrote, directed, and stars in <strong>Pick Me</strong>, the short film executive produced by <strong>Lilly Wachowski</strong> currently on the festival circuit. She's developing it into a feature-length romantic comedy.</p>
-        <p>She runs <a href="https://palavaproductions.com" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;"><strong>Palava Productions</strong></a> with her sister Sameliah. She's based in Los Angeles.</p>
+        <p>She runs <a href="https://palavaproductions.com" target="_blank" rel="noopener" style="color:#e768a7;text-decoration:none;"><strong>Palava Productions</strong></a> with her sister Sameliah. She's based in Los Angeles.</p>
       </div>
     </div>
   </section>
@@ -1041,7 +1106,7 @@ a { color: inherit; text-decoration: none; }
     <div class="credits-inner">
       <div class="credits-top">
         <div>
-          <div class="kicker">The Receipts</div>
+          <a href="https://www.imdb.com/name/nm8555752/?ref_=nv_sr_srsg_0_tt_1_nm_7_in_0_q_april%2520ko" target="_blank" rel="noopener" style="text-decoration:none;"><div class="kicker">The Receipts</div></a>
           <h2 class="credits-hed">What I've Done <em>(so far).</em></h2>
         </div>
         <div class="credits-meta">
@@ -1053,37 +1118,37 @@ a { color: inherit; text-decoration: none; }
         <div class="cb-card active" onclick="activateCard(this)">
           <span class="cb-num">01</span>
           <div><div class="cb-title">Pick Me</div><div class="cb-role">Writer / Director / Star</div></div>
-          <span class="cb-tag">Palava Productions</span>
+          <a class="cb-tag" href="https://palavaproductions.com" target="_blank" rel="noopener" onclick="event.stopPropagation()">Palava Productions</a>
         </div>
         <div class="cb-card" onclick="activateCard(this)">
           <span class="cb-num">02</span>
           <div><div class="cb-title">Survival of the Thickest</div><div class="cb-role">Writer / Co-Executive Producer</div></div>
-          <span class="cb-tag">Netflix</span>
+          <a class="cb-tag" href="https://www.netflix.com/title/81478195" target="_blank" rel="noopener" onclick="event.stopPropagation()">Netflix</a>
         </div>
         <div class="cb-card" onclick="activateCard(this)">
           <span class="cb-num">03</span>
           <div><div class="cb-title">Loot</div><div class="cb-role">Writer / Supervising Producer</div></div>
-          <span class="cb-tag">Apple TV+</span>
+          <a class="cb-tag" href="https://tv.apple.com/us/show/loot/umc.cmc.5erbujil1mpazuerhr1udnk45" target="_blank" rel="noopener" onclick="event.stopPropagation()">Apple TV+</a>
         </div>
         <div class="cb-card" onclick="activateCard(this)">
           <span class="cb-num">04</span>
           <div><div class="cb-title">The Other Black Girl</div><div class="cb-role">Writer / Producer</div></div>
-          <span class="cb-tag">Hulu</span>
+          <a class="cb-tag" href="https://www.hulu.com/series/the-other-black-girl-97e0a1b9-31c0-4e37-9c76-6de1f42b6ddb" target="_blank" rel="noopener" onclick="event.stopPropagation()">Hulu</a>
         </div>
         <div class="cb-card" onclick="activateCard(this)">
           <span class="cb-num">05</span>
           <div><div class="cb-title">Brooklyn Nine-Nine</div><div class="cb-role">Writer</div></div>
-          <span class="cb-tag">NBC</span>
+          <a class="cb-tag" href="https://www.nbc.com/brooklyn-nine-nine" target="_blank" rel="noopener" onclick="event.stopPropagation()">NBC</a>
         </div>
         <div class="cb-card" onclick="activateCard(this)">
           <span class="cb-num">06</span>
           <div><div class="cb-title">Sunnyside</div><div class="cb-role">Staff Writer</div></div>
-          <span class="cb-tag">NBC</span>
+          <a class="cb-tag" href="https://www.nbc.com/sunnyside" target="_blank" rel="noopener" onclick="event.stopPropagation()">NBC</a>
         </div>
         <div class="cb-card" onclick="activateCard(this)">
           <span class="cb-num">07</span>
           <div><div class="cb-title">You Owe Me an Apology</div><div class="cb-role">Creator</div></div>
-          <span class="cb-tag">Substack Newsletter</span>
+          <a class="cb-tag" href="https://youowemeanapology.substack.com/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Substack Newsletter</a>
         </div>
       </div>
     </div>
@@ -1264,12 +1329,20 @@ a { color: inherit; text-decoration: none; }
   <script>
   (function(){
     const btn = document.getElementById('hitmeup');
+    const closeBtn = document.getElementById('hitmeup-close');
     let startX = 0, currentX = 0, dragging = false;
 
     function dismiss() {
       btn.style.transform = '';
       btn.classList.add('dismissed');
+      closeBtn.classList.add('dismissed');
     }
+
+    // × button click
+    closeBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      dismiss();
+    });
 
     // Mobile: swipe right to dismiss
     btn.addEventListener('touchstart', function(e) {
