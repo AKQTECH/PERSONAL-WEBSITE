@@ -208,7 +208,7 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  gap: 24px;
+  gap: 14px;
 }
 .hero-name {
   font-family: 'Antonio', sans-serif;
@@ -222,11 +222,11 @@ a { color: inherit; text-decoration: none; }
 .hero-subname {
   font-family: 'Antonio', sans-serif;
   font-weight: 700;
-  font-size: clamp(24px, 6vw, 70px);
+  font-size: clamp(35px, 6vw, 90px);
   color: #e768a7;
   text-transform: none;
-  line-height: 1.1;
-  transform: translateY(0.4em);
+  line-height: .7;
+  transform: translateY(0.1em);
   white-space: nowrap;
 }
 
@@ -968,13 +968,17 @@ a { color: inherit; text-decoration: none; }
 @media (orientation: portrait) {
   .hitmeup-btn { display: none !important; }
   .hitmeup-close { display: none !important; }
+  #blocking-tile { grid-column: span 1 !important; }
+  #blocking-tile img { object-position: center 55%; }
   .hero-name-wrap {
     bottom: 16px;
     left: 15px;
     right: 15px;
+    gap: 9px;
   }
   .hero-subname {
-    font-size: clamp(18px, 4.5vw, 40px);
+    font-size: clamp(48px, 8vw, 60px);
+    line-height: 0.8
   }
 }
 /* Wide screens: move Hit Me Up button in from the edge toward the hero image */
@@ -1347,6 +1351,10 @@ a { color: inherit; text-decoration: none; }
         <img src="official photos/Lee_Dubin03689.jpg" alt="Wide crew" style="object-position:center 68%">
         <div class="proof-cap"><strong>All in the Family</strong>Drama, drama, drama.</div>
       </div>
+      <div class="proof-tile" id="blocking-tile" style="grid-column: span 2;">
+        <img src="official photos/lee_dubin4642.jpg" alt="Blocking on set" style="object-position:center 40%">
+        <div class="proof-cap"><strong>Blocking</strong>Get you a girl who can do both.</div>
+      </div>
     </div>
   </section>
 
@@ -1355,9 +1363,11 @@ a { color: inherit; text-decoration: none; }
     <div class="whats-next-grid">
 
       <!-- Left: Media -->
-      <div class="whats-next-media" style="margin-top: 44px;">
-        <img src="official photos/Lee_Dubin02346.jpg" alt="April Korto Quioh with DP Tanmay Chowdhary" style="object-position: 0% 15%;">
-        <div style="position:absolute;bottom:0;left:0;right:0;background:rgba(0,0,0,0.45);color:#ffd9f5;font-family:'DM Sans',sans-serif;font-size:11px;letter-spacing:0.08em;padding:10px 14px;">making it happen with DP Tanmay Chowdhary</div>
+      <div style="margin-top: 44px;">
+        <div class="whats-next-media proof-tile" style="aspect-ratio:4/3;">
+          <img src="official photos/Lee_Dubin02346.jpg" alt="April Korto Quioh with DP Tanmay Chowdhary" style="object-position: 0% 15%;">
+          <div class="proof-cap"><strong>Making it happen</strong>with DP Tanmay Chowdhary</div>
+        </div>
       </div>
 
       <!-- Right: Text Content -->
@@ -1365,7 +1375,7 @@ a { color: inherit; text-decoration: none; }
         <div class="kicker">Work With Me</div>
         <h2 class="whats-next-hed">WORK WITH <em>me.</em></h2>
 
-        <p class="lead" style="color:#e768a7;">Currently booking: shorts, music videos, experimental storytelling, branded content, and narrative projects that light me up.</p>
+        <p class="lead" style="color:#e768a7;"><strong style="color:inherit;">Currently booking:</strong> shorts, music videos, experimental storytelling, branded content, and narrative projects that light me up.</p>
 
         <p>I'm looking to collaborate and tell stories that are full of heart and find levity even in the toughest of moments. In addition to my 10+ years as a professional comedy writer, I bring along with me my lifelong commitment to having a laugh by any means necessary, my careful attention to detail, my improvisational approach to storytelling, and my consistent ability to be a 10/10 hang.</p>
 
