@@ -97,22 +97,6 @@ if (nextStepCards.length) {
   });
 }
 
-const reelButton = document.querySelector('.reel-button');
-const videoDialog = document.querySelector('.video-dialog');
-const closeDialog = document.querySelector('.dialog-close');
-const reelEmbed = document.querySelector('.video-frame iframe');
-
-if (reelButton && videoDialog && closeDialog) {
-  reelButton.addEventListener('click', () => videoDialog.showModal());
-  closeDialog.addEventListener('click', () => videoDialog.close());
-  videoDialog.addEventListener('click', (event) => {
-    if (event.target === videoDialog) videoDialog.close();
-  });
-  videoDialog.addEventListener('close', () => {
-    if (reelEmbed) reelEmbed.src = reelEmbed.src;
-  });
-}
-
 const fadeButton = document.querySelector('.fade-paper');
 let fadeTimer = 0;
 
