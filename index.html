@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>April Korto Quioh — Comedy Writer, Director & Actress | Los Angeles</title>
+<title>AKQ Website Color Choice Review Tool — July 2026</title>
 <meta name="description" content="April Korto Quioh is a Liberian-American screenwriter, director, and actress based in Los Angeles. TV credits include Netflix, Apple TV+, Hulu, and NBC. Creator and star of Pick Me, exec produced by Lilly Wachowski.">
 <meta name="keywords" content="April Korto Quioh, comedy writer Los Angeles, TV writer Los Angeles, screenwriter director actress, Liberian American writer, Pick Me short film, Survival of the Thickest writer, Brooklyn Nine-Nine writer, Loot Apple TV writer, The Other Black Girl writer">
 <meta name="author" content="April Korto Quioh">
-<meta name="robots" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -125,6 +125,58 @@ a { color: inherit; text-decoration: none; }
 }
 .hitmeup-close:hover { opacity: 1; }
 .hitmeup-close.dismissed { display: none; }
+.top-actions {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.top-action-item {
+  position: relative;
+  display: inline-flex;
+}
+.top-actions .hitmeup-btn {
+  position: static;
+  inset: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 118px;
+  background: #e975a8;
+}
+.top-actions .brands-btn {
+  background: #ffd4f4;
+  color: #e768a7;
+}
+.top-actions .brands-btn:hover {
+  background: #ffe8f5;
+  color: #d1479e;
+}
+.top-actions .hitmeup-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  color: rgba(230, 104, 167, .38);
+}
+.top-actions .hitmeup-btn.dismissed {
+  transform: translateX(56px) !important;
+  opacity: 0;
+  pointer-events: none;
+}
+.top-actions .hitmeup-close.dismissed {
+  display: none;
+}
+.brand-link {
+  color: #d0357f;
+  font-weight: 800;
+  text-decoration: none;
+}
+.brand-link:hover {
+  color: #ff60b1;
+}
 
 /* ===== HERO — from v4 layout, adjusted to palette ===== */
 .hero {
@@ -742,19 +794,20 @@ a { color: inherit; text-decoration: none; }
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 360px 280px;
   gap: 8px;
+  background: var(--proof-gallery-gap, var(--page-bg));
 }
 .proof-tile {
   position: relative;
   overflow: hidden;
-  background: var(--candy);
+  background: var(--proof-tile-fill, var(--candy));
 }
 .proof-tile img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
 .proof-tile:hover img { transform: scale(1.04); }
 .proof-cap {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  background: #cc6699;
-  color: #ffdaf5;
+  background: var(--proof-caption-bg, #cc6699);
+  color: var(--proof-caption-font, #ffdaf5);
   padding: 12px 14px;
   font-family: 'DM Sans', sans-serif;
   font-weight: 500;
@@ -769,7 +822,7 @@ a { color: inherit; text-decoration: none; }
   font-size: 9px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: #ffdaf5;
+  color: var(--proof-caption-font, #ffdaf5);
   margin-bottom: 3px;
 }
 .proof-tile:hover .proof-cap { opacity: 1; transform: translateY(0); }
@@ -944,8 +997,9 @@ a { color: inherit; text-decoration: none; }
   .credits-meta { text-align: left; padding-left: 0; }
 }
 @media (max-width: 768px) {
-  .hitmeup-btn { top: 44px; right: 12px; padding: 8px 16px; font-size: 9px; }
-  .hitmeup-close { top: 37px; right: 6px; }
+  .top-actions { top: 44px; right: 12px; gap: 8px; }
+  .top-actions .hitmeup-btn { padding: 8px 14px; font-size: 9px; min-width: 96px; }
+  .top-actions .hitmeup-close { top: -7px; right: -7px; }
   .hero-photo { top: 28px; left: 28px; right: 28px; bottom: 28px; }
   .hero-left-block { top: 12px; left: 12px; }
   .hero-left-block .hero-credit-name { font-size: 12px; }
@@ -966,25 +1020,26 @@ a { color: inherit; text-decoration: none; }
 }
 /* Portrait: hide button, fix name position */
 @media (orientation: portrait) {
-  .hitmeup-btn { display: none !important; }
-  .hitmeup-close { display: none !important; }
+  .top-actions {
+    display: flex !important;
+    top: 20px;
+    right: 12px;
+  }
+  .top-actions .hitmeup-btn {
+    display: inline-flex;
+  }
+  .top-actions .hitmeup-close {
+    display: block;
+  }
   #blocking-tile { grid-column: span 1 !important; }
   #blocking-tile img { object-position: center 55%; }
   .hero-name-wrap {
-    bottom: 16px;
-    left: 15px;
-    right: 15px;
-    gap: 9px;
-  }
-  .hero-subname {
-    font-size: clamp(38px, 8vw, 60px);
-    line-height: 0.8
+    display: none !important;
   }
 }
 /* Wide screens: move Hit Me Up button in from the edge toward the hero image */
 @media (min-width: 1200px) {
-  .hitmeup-btn { right: 4%; }
-  .hitmeup-close { right: calc(4% - 7px); }
+  .top-actions { right: 4%; }
 }
 
 /* ===== WORK WITH ME SECTION ===== */
@@ -1076,30 +1131,513 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 768px) {
   .whats-next-section { padding: 64px 24px; }
 }
+/* ===== FINAL DEPLOYED COLOR SYSTEM — JULY 2026 ===== */
+:root {
+  --black: #1C1410;
+  --page-bg: #F5D0F5;
+  --blush: var(--page-bg);
+  --hero-bg: #FED5E8;
+  --hero-image-bg: #FED5E8;
+  --april-fill: #E668A7;
+  --korto-fill: #FFAEF7;
+  --korto-font: Georgia, serif;
+  --hero-name-font: 'DM Sans', sans-serif;
+  --hero-accent: #ffad8f;
+  --hero-name-fill: #FF7A9E;
+  --hero-frame-outer: #E979AC;
+  --hero-frame-inner: #FFAEF7;
+  --hero-dash: #FFAEF7;
+  --hero-copy: #FFD4F4;
+  --marquee-font: #F78BC5;
+  --marquee-dot: #F39BC9;
+  --horizon-bg: #FFF2F1;
+  --horizon-kicker: #F39BC9;
+  --horizon-heading: #1C1410;
+  --horizon-accent: #EA6CB5;
+  --horizon-card-bg: #FF7B9E;
+  --horizon-card-title: #FFD9F5;
+  --horizon-card-body: #FFD4F4;
+  --proof-gallery-gap: #FFF2F1;
+  --proof-tile-fill: #ffa6d9;
+  --proof-caption-bg: #E979AC;
+  --proof-caption-font: #FFD4F4;
+}
+html,
+body,
+.hero,
+.marquee-strip,
+.reel-section,
+.about-section,
+.title-section,
+.credits-section,
+.c6-section,
+.proof-section,
+.horizon-section,
+.whats-next-section,
+.contact-section {
+  background: var(--page-bg);
+}
+body {
+  color: var(--black);
+}
+.hero {
+  min-height: 760px;
+}
+.hero-photo {
+  top: clamp(78px, 8vh, 118px);
+  bottom: clamp(46px, 7vh, 78px);
+  left: 50%;
+  right: auto;
+  width: min(1120px, calc(100vw - 13vw));
+  transform: translateX(-50%);
+  border: 5px solid var(--hero-frame-outer);
+  background: var(--hero-bg);
+}
+.hero-photo::before {
+  content: none;
+  display: none;
+}
+.hero-inner-frame {
+  position: absolute;
+  inset: 24px;
+  z-index: 3;
+  border: 3px solid var(--hero-frame-inner);
+  pointer-events: none;
+}
+.hero-photo img {
+  object-position: center 70%;
+}
+.hero-left-block {
+  top: auto;
+  bottom: clamp(40px, 5vw, 68px);
+  left: clamp(44px, 5.8vw, 88px);
+  padding-left: 30px;
+  max-width: min(430px, calc(100% - 120px));
+  background: transparent !important;
+}
+.hero-left-block::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 5px;
+  width: 7px;
+  background: var(--hero-dash);
+}
+.hero-left-block .hero-credit-name {
+  display: block;
+  margin: 0 0 10px;
+  font-family: var(--hero-name-font) !important;
+  font-weight: 800;
+  font-style: normal;
+  font-size: clamp(24px, 2.5vw, 34px);
+  line-height: 1.05;
+  letter-spacing: .12em;
+  text-transform: lowercase;
+  color: var(--hero-name-fill);
+}
+.hero-left-block .hero-meta-line {
+  color: var(--hero-copy);
+  font-size: clamp(9px, .82vw, 12px);
+  letter-spacing: .16em;
+  line-height: 1.65;
+}
+.hero-right-block {
+  display: none !important;
+}
+.hero-name-wrap {
+  display: none !important;
+}
+.hero-name {
+  color: var(--april-fill);
+  text-shadow: none !important;
+}
+.hero-subname {
+  color: var(--korto-fill);
+  font-family: var(--korto-font);
+  text-shadow: none !important;
+}
+.marquee-track span,
+.marquee-track a,
+#whodat-marquee .marquee-track span,
+#reel-marquee .marquee-track span,
+#press-marquee .marquee-track a,
+#receipts-marquee .marquee-track span {
+  color: var(--marquee-font) !important;
+}
+.marquee-track span::after,
+.marquee-track a::after,
+#whodat-marquee .marquee-track span::after,
+#reel-marquee .marquee-track span::after,
+#press-marquee .marquee-track a::after,
+#receipts-marquee .marquee-track span::after {
+  background: var(--marquee-dot) !important;
+}
+.horizon-section {
+  background: var(--horizon-bg) !important;
+}
+.horizon-head .kicker {
+  color: var(--horizon-kicker) !important;
+}
+.horizon-head .kicker::before,
+.horizon-head .kicker::after {
+  background: var(--horizon-kicker) !important;
+}
+.horizon-hed {
+  color: var(--horizon-heading) !important;
+}
+.horizon-hed em {
+  color: var(--horizon-accent) !important;
+}
+.horizon-card {
+  background: var(--horizon-card-bg) !important;
+}
+.horizon-card:hover {
+  background: var(--horizon-card-bg) !important;
+}
+.horizon-card h3,
+.horizon-card h3 a {
+  color: var(--horizon-card-title) !important;
+}
+.horizon-card:hover h3,
+.horizon-card:hover h3 a {
+  color: var(--horizon-card-title) !important;
+}
+.horizon-card p {
+  color: var(--horizon-card-body) !important;
+}
+.horizon-card:hover p {
+  color: var(--horizon-card-body) !important;
+}
+/* Font requests from 2026-07-20 review notes */
+.about-hed,
+.about-hed em,
+.about-hed a,
+.horizon-hed,
+.horizon-hed em,
+.credits-hed em,
+.whats-next-hed em,
+.contact-hed em {
+  font-family: 'DM Sans', sans-serif !important;
+}
+.about-hed,
+.about-hed em,
+.about-hed a,
+.credits-hed em {
+  font-weight: 800 !important;
+}
+.horizon-hed,
+.horizon-hed em,
+.credits-hed em,
+.whats-next-hed em,
+.contact-hed em {
+  font-style: normal !important;
+  font-weight: 800 !important;
+}
+.title-quote {
+  font-family: 'DM Sans', sans-serif !important;
+  font-style: italic !important;
+  font-weight: 800 !important;
+}
+.contact-hed em {
+  text-transform: none;
+  letter-spacing: 0;
+}
+.whats-next-hed em {
+  display: inline-block;
+  font-size: 1.12em;
+  line-height: .85;
+}
+.contact-hed {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: clamp(10px, 1.6vw, 22px);
+  max-width: 100%;
+  font-size: clamp(72px, 9.2vw, 156px) !important;
+  line-height: .82 !important;
+}
+.contact-hed-main {
+  display: block;
+  white-space: nowrap;
+  font-family: 'Antonio', sans-serif;
+  font-weight: 700;
+  line-height: .82;
+}
+.contact-hed em,
+.contact-hed em.orchid-up {
+  display: block;
+  max-width: 100%;
+  background: transparent !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 800 !important;
+  font-size: clamp(82px, 10vw, 154px) !important;
+  line-height: .76 !important;
+  text-transform: lowercase;
+  letter-spacing: 0;
+  transform: none !important;
+}
+/* ===== FINAL COLORWAY — LOCKED FOR DEPLOYMENT ===== */
+.hero {
+  background: var(--hero-bg) !important;
+}
+.about-section,
+.credits-section,
+.c6-section,
+.proof-section,
+.whats-next-section,
+.contact-section,
+.marquee-strip:not(#reel-marquee) {
+  background: #fff2f1 !important;
+}
+.reel-section {
+  background: #FD9DAA !important;
+}
+#reel-marquee {
+  background: #FED5E8 !important;
+}
+.title-section,
+.reel-stage {
+  background: #f39bc9 !important;
+}
+.reel-label {
+  background: #f78bc5 !important;
+  color: #fff2f1 !important;
+}
+.reel-stage {
+  border-color: #FFAEF7 !important;
+}
+.reel-label {
+  border-bottom: 2px solid #FFAEF7;
+}
+.about-prehed {
+  color: #1C1410 !important;
+}
+.about-prehed .warm,
+.title-line em,
+.c6-ep,
+.c6-logline .accent,
+.whats-next-hed,
+.whats-next-text p.lead,
+.whats-next-text p.lead strong {
+  color: #E668A7 !important;
+}
+.kicker {
+  color: #f78bc5 !important;
+}
+.title-line,
+.title-quote,
+.title-quote cite {
+  color: #d0357f !important;
+}
+.credits-hed {
+  color: #FF7B9E !important;
+}
+.credits-hed em {
+  color: #EA6CB5 !important;
+}
+.credits-meta,
+.credits-meta .loc {
+  color: #d1479e !important;
+}
+.credits-top,
+.credits-rows,
+.cb-card {
+  background: #fff2f1 !important;
+}
+.cb-card,
+.cb-role {
+  color: #E87BBF !important;
+}
+.cb-title,
+.cb-card.active .cb-title {
+  color: #f78bc5 !important;
+}
+.cb-card.active {
+  background: #fff2f1 !important;
+}
+.cb-num,
+.cb-card.active .cb-num {
+  color: #f39bc9 !important;
+}
+.cb-tag,
+.cb-card.active .cb-tag {
+  background: #e979ac !important;
+  color: #ffd4f4 !important;
+}
+.c6-circuit {
+  background: #E668A7 !important;
+  color: #ffdaf5 !important;
+}
+.c6-circuit:hover {
+  background: #d0357f !important;
+  color: #ffd4f4 !important;
+}
+.brand-link,
+.about-text .brand-link,
+.whats-next-text .brand-link {
+  color: #FFAD8F !important;
+  text-decoration: none !important;
+}
+.horizon-hed em {
+  font-family: 'DM Sans', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 800 !important;
+}
+.proof-cap,
+.proof-cap strong {
+  color: #ffd4f4 !important;
+}
+#blocking-tile .proof-cap {
+  background: #ff60b1 !important;
+  color: #ffd4f4 !important;
+}
+#blocking-tile .proof-cap strong {
+  color: #ffd4f4 !important;
+}
+.contact-hed {
+  color: #f78bc5 !important;
+}
+.contact-hed em {
+  background: transparent !important;
+  color: #FF7B9E !important;
+}
+.whats-next-hed em {
+  color: #FF7B9E !important;
+}
+.contact-email {
+  background: #ffdaf5 !important;
+  color: #f39bc9 !important;
+}
+.fine,
+.fine span:last-child,
+.social-links a {
+  color: #f39bc9 !important;
+}
+.kicker::before,
+.kicker::after {
+  background: #fff2f1 !important;
+}
+.horizon-head .kicker::before,
+.horizon-head .kicker::after {
+  background: #f39bc9 !important;
+}
+#brands-btn {
+  background: #f78bc5 !important;
+  color: #FFD4F4 !important;
+}
+#hitmeup {
+  background: #E668A7 !important;
+  color: #FFD4F4 !important;
+}
+@media (max-width: 768px) {
+  .top-actions {
+    position: fixed;
+    top: calc(clamp(18px, 2.7vh, 40px) + 36px);
+    right: calc((100vw - min(592px, calc(100vw - clamp(46px, 11.5vw, 104px)))) / 2 + clamp(50px, 8.8vw, 62px));
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 7px;
+    z-index: 8;
+  }
+  .top-actions .hitmeup-btn {
+    min-width: clamp(64px, 12.4vw, 76px);
+    min-height: clamp(18px, 3.4vw, 22px);
+    padding: 0 clamp(9px, 1.8vw, 11px);
+    border-radius: 999px;
+    font-size: clamp(5px, 1.05vw, 7px);
+    line-height: 1;
+    letter-spacing: .18em;
+  }
+  .top-actions .hitmeup-close {
+    display: none !important;
+  }
+  .hero {
+    height: 100svh;
+    min-height: 720px;
+  }
+  .hero-photo {
+    top: clamp(18px, 2.7vh, 40px);
+    bottom: auto;
+    left: 50%;
+    right: auto;
+    width: min(592px, calc(100vw - clamp(46px, 11.5vw, 104px)));
+    height: auto;
+    aspect-ratio: 2 / 3;
+    transform: none;
+    transform: translateX(-50%);
+    border-width: 4px;
+  }
+  .hero-inner-frame {
+    inset: clamp(18px, 3.7vw, 24px);
+    border-width: 3px;
+  }
+  .hero-photo img {
+    object-position: center center;
+  }
+  .hero-right-block {
+    display: none !important;
+  }
+  .hero-right-block em {
+    font-size: 9px !important;
+    letter-spacing: .12em;
+  }
+  .hero-left-block {
+    top: clamp(108px, 14.4vh, 136px);
+    bottom: auto;
+    left: clamp(40px, 8.2vw, 64px);
+    padding-left: clamp(30px, 5.8vw, 42px);
+    max-width: min(330px, calc(100% - 94px));
+  }
+  .hero-left-block::before {
+    top: 0;
+    bottom: auto;
+    width: clamp(7px, 1.2vw, 9px);
+    height: clamp(58px, 8vh, 74px);
+  }
+  .hero-left-block .hero-credit-name {
+    font-size: clamp(18px, 4.2vw, 24px);
+    letter-spacing: .1em;
+    margin-bottom: 4px;
+    white-space: nowrap;
+  }
+  .hero-left-block .hero-meta-line {
+    font-size: clamp(10px, 1.7vw, 12px);
+    letter-spacing: .17em;
+    line-height: 1.65;
+  }
+  .hero-name-wrap {
+    display: none !important;
+  }
+}
 </style>
 </head>
 <body>
 
-  <!-- HIT ME UP BUTTON — from v7, with swipe-to-dismiss -->
-  <a href="#contact" class="hitmeup-btn" id="hitmeup">Hit Me Up</a>
-  <button class="hitmeup-close" id="hitmeup-close" aria-label="Dismiss">×</button>
+  <!-- TOP ACTION BUTTONS — from v7, with swipe-to-dismiss -->
+  <div class="top-actions" aria-label="Primary site actions">
+    <span class="top-action-item">
+      <a href="https://aprilkortoquioh.com/brands" class="hitmeup-btn brands-btn" id="brands-btn">Brands</a>
+      <button class="hitmeup-close brands-close" id="brands-close" aria-label="Dismiss Brands">×</button>
+    </span>
+    <span class="top-action-item">
+      <a href="#contact" class="hitmeup-btn" id="hitmeup">Hit Me Up</a>
+      <button class="hitmeup-close" id="hitmeup-close" aria-label="Dismiss Hit Me Up">×</button>
+    </span>
+  </div>
 
   <!-- HERO — from v4 layout -->
   <section class="hero">
     <div class="hero-photo">
       <img src="official photos/DSC04174.jpg" alt="April Korto Quioh">
+      <div class="hero-inner-frame" aria-hidden="true"></div>
       <div class="hero-left-block">
+        <span class="hero-credit-name">april korto quioh</span>
         <span class="hero-meta-line">Writer / Director / Actress</span>
         <span class="hero-meta-line">Now Showing — Pick Me</span>
         <span class="hero-meta-line">Los Angeles, 2026</span>
       </div>
-      <div class="hero-right-block">
-        <em>read it and weep.</em>
-      </div>
-    </div>
-    <div class="hero-name-wrap">
-      <h1 class="hero-name">APRIL</h1>
-      <span class="hero-subname">korto quioh</span>
     </div>
   </section>
 
@@ -1150,6 +1688,7 @@ a { color: inherit; text-decoration: none; }
         <p>She grew up in Minneapolis, Minnesota in a tight-knit community of eccentric Liberian immigrants. She writes about them often.</p>
         <p>She's currently based in Los Angeles, where she has written on NBC's <a href="https://www.nbc.com/brooklyn-nine-nine" target="_blank" rel="noopener"><strong>Brooklyn Nine-Nine</strong></a> and Hulu's <a href="https://www.hulu.com/series/the-other-black-girl-97e0a1b9-31c0-4e37-9c76-6de1f42b6ddb" target="_blank" rel="noopener"><strong>The Other Black Girl</strong></a>, was a Co-Executive Producer on Netflix's <a href="https://www.netflix.com/title/81478195" target="_blank" rel="noopener"><strong>Survival of the Thickest</strong></a>, and a Supervising Producer on Apple TV+'s <a href="https://tv.apple.com/us/show/loot/umc.cmc.5erbujil1mpazuerhr1udnk45" target="_blank" rel="noopener"><strong>Loot</strong></a>.</p>
         <p>Recently, she wrote, directed, and starred in her short film <a href="https://pickmemovie.com" target="_blank" rel="noopener" style="color:#e768a7;text-decoration:none;"><strong>Pick Me</strong></a>, Executive Produced by <strong>Lilly Wachowski</strong>, and is now developing it into a feature-length film.</p>
+        <p>For brands, she turns <a href="https://aprilkortoquioh.com/brands" target="_blank" rel="noopener" class="brand-link">branded content</a> into prestige television - vertical series with characters, cliffhangers, and jokes people actually want to group chat about.</p>
         <p>She runs a production company called <a href="https://palavaproductions.com" target="_blank" rel="noopener" style="color:#e768a7;text-decoration:none;"><strong>Palava Productions</strong></a> with her best friend, collaborator, and older sister. She could model but she's really more of an intellectual.</p>
         <p>If you're just like everyone else and can't get enough April, you should read her newsletter, <a href="https://youowemeanapology.substack.com/" target="_blank" rel="noopener" style="color:#e768a7;text-decoration:none;"><strong>You Owe Me An Apology</strong></a>.</p>
         <p>And if you owe her an apology, be sure to apologize to her ASAP.</p>
@@ -1375,7 +1914,7 @@ a { color: inherit; text-decoration: none; }
         <div class="kicker">Work With Me</div>
         <h2 class="whats-next-hed">WORK WITH <em>me.</em></h2>
 
-        <p class="lead" style="color:#e768a7;"><strong style="color:inherit;">Currently booking:</strong> shorts, music videos, experimental storytelling, branded content, and narrative projects that light me up.</p>
+        <p class="lead" style="color:#e768a7;"><strong style="color:inherit;">Currently booking:</strong> shorts, music videos, experimental storytelling, <a href="https://aprilkortoquioh.com/brands" target="_blank" rel="noopener" class="brand-link">branded content</a>, and narrative projects that light me up.</p>
 
         <p>I'm looking to collaborate and tell stories that are full of heart and find levity even in the toughest of moments. In addition to my 10+ years as a professional comedy writer, I bring along with me my lifelong commitment to having a laugh by any means necessary, my careful attention to detail, my improvisational approach to storytelling, and my consistent ability to be a 10/10 hang.</p>
 
@@ -1397,7 +1936,7 @@ a { color: inherit; text-decoration: none; }
       </div>
       <div class="contact-text">
         <div class="kicker">Get In Touch</div>
-        <h2 class="contact-hed">Hit me <em class="orchid-up">up.</em></h2>
+        <h2 class="contact-hed"><span class="contact-hed-main">Hit me</span><em class="orchid-up">up.</em></h2>
         <a class="contact-email" href="mailto:april@aprilkortoquioh.com">april@aprilkortoquioh.com</a>
       </div>
     </div>
@@ -1464,60 +2003,92 @@ a { color: inherit; text-decoration: none; }
   }
   </script>
 
-  <!-- Swipe-to-dismiss for Hit Me Up button -->
+  <!-- Swipe-to-dismiss for top action buttons -->
   <script>
   (function(){
-    const btn = document.getElementById('hitmeup');
-    const closeBtn = document.getElementById('hitmeup-close');
-    let startX = 0, currentX = 0, dragging = false;
+    function wireDismiss(buttonId, closeId) {
+      const btn = document.getElementById(buttonId);
+      const closeBtn = document.getElementById(closeId);
+      if (!btn || !closeBtn) return;
+      let startX = 0, currentX = 0, dragging = false;
 
-    function dismiss() {
-      btn.style.transform = '';
-      btn.classList.add('dismissed');
-      closeBtn.classList.add('dismissed');
-    }
-
-    // × button click
-    closeBtn.addEventListener('click', function(e) {
-      e.preventDefault();
-      dismiss();
-    });
-
-    // Mobile: swipe right to dismiss
-    btn.addEventListener('touchstart', function(e) {
-      if (btn.classList.contains('dismissed')) return;
-      startX = e.touches[0].clientX;
-      currentX = startX;
-      dragging = true;
-    }, { passive: true });
-
-    btn.addEventListener('touchmove', function(e) {
-      if (!dragging) return;
-      currentX = e.touches[0].clientX;
-      var dx = currentX - startX;
-      if (dx > 0) {
-        btn.style.transform = 'translateX(' + dx + 'px)';
-        btn.style.opacity = Math.max(0, 1 - dx / 120);
-      }
-    }, { passive: true });
-
-    btn.addEventListener('touchend', function() {
-      if (!dragging) return;
-      dragging = false;
-      var dx = currentX - startX;
-      if (dx > 60) {
-        dismiss();
-      } else {
+      function dismiss() {
         btn.style.transform = '';
         btn.style.opacity = '';
+        btn.classList.add('dismissed');
+        closeBtn.classList.add('dismissed');
       }
-    });
 
-    // Desktop: double-click to dismiss
-    btn.addEventListener('dblclick', function(e) {
-      e.preventDefault();
-      dismiss();
-    });
+      closeBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        dismiss();
+      });
+
+      btn.addEventListener('touchstart', function(e) {
+        if (btn.classList.contains('dismissed')) return;
+        startX = e.touches[0].clientX;
+        currentX = startX;
+        dragging = true;
+      }, { passive: true });
+
+      btn.addEventListener('touchmove', function(e) {
+        if (!dragging) return;
+        currentX = e.touches[0].clientX;
+        var dx = currentX - startX;
+        if (dx > 0) {
+          btn.style.transform = 'translateX(' + dx + 'px)';
+          btn.style.opacity = Math.max(0, 1 - dx / 120);
+        }
+      }, { passive: true });
+
+      btn.addEventListener('touchend', function() {
+        if (!dragging) return;
+        dragging = false;
+        var dx = currentX - startX;
+        if (dx > 60) {
+          dismiss();
+        } else {
+          btn.style.transform = '';
+          btn.style.opacity = '';
+        }
+      });
+
+      btn.addEventListener('dblclick', function(e) {
+        e.preventDefault();
+        dismiss();
+      });
+    }
+
+    wireDismiss('brands-btn', 'brands-close');
+    wireDismiss('hitmeup', 'hitmeup-close');
+  })();
+  </script>
+
+  <!-- Keep APRIL + Korto Quioh inside the hero image width after font changes -->
+  <script>
+  (function(){
+    function fitHeroLockup() {
+      const photo = document.querySelector('.hero-photo');
+      const wrap = document.querySelector('.hero-name-wrap');
+      if (!photo || !wrap) return;
+      wrap.style.setProperty('--hero-lockup-scale', '1');
+      requestAnimationFrame(function() {
+        const photoWidth = photo.getBoundingClientRect().width;
+        const children = Array.from(wrap.children);
+        const gap = parseFloat(getComputedStyle(wrap).columnGap || getComputedStyle(wrap).gap || 0) || 0;
+        const childrenWidth = children.reduce(function(total, child) {
+          return total + child.getBoundingClientRect().width;
+        }, 0);
+        const neededWidth = Math.max(wrap.scrollWidth, childrenWidth + gap * Math.max(0, children.length - 1));
+        if (!photoWidth || !neededWidth) return;
+        const scale = Math.min(1, (photoWidth - 2) / neededWidth);
+        wrap.style.setProperty('--hero-lockup-scale', scale.toFixed(3));
+      });
+    }
+    window.fitHeroLockup = fitHeroLockup;
+    window.addEventListener('resize', fitHeroLockup);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitHeroLockup);
+    document.addEventListener('DOMContentLoaded', fitHeroLockup);
   })();
   </script>
 
