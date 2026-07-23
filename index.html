@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AKQ Website Color Choice Review Tool — July 2026</title>
+<title>April Korto Quioh — Comedy Writer, Director & Actress | Los Angeles</title>
 <meta name="description" content="April Korto Quioh is a Liberian-American screenwriter, director, and actress based in Los Angeles. TV credits include Netflix, Apple TV+, Hulu, and NBC. Creator and star of Pick Me, exec produced by Lilly Wachowski.">
 <meta name="keywords" content="April Korto Quioh, comedy writer Los Angeles, TV writer Los Angeles, screenwriter director actress, Liberian American writer, Pick Me short film, Survival of the Thickest writer, Brooklyn Nine-Nine writer, Loot Apple TV writer, The Other Black Girl writer">
 <meta name="author" content="April Korto Quioh">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
@@ -1387,8 +1387,7 @@ body {
 .c6-section,
 .proof-section,
 .whats-next-section,
-.contact-section,
-.marquee-strip:not(#reel-marquee) {
+.contact-section {
   background: #fff2f1 !important;
 }
 .reel-section {
@@ -1477,7 +1476,7 @@ body {
 .brand-link,
 .about-text .brand-link,
 .whats-next-text .brand-link {
-  color: #FFAD8F !important;
+  color: #e32698 !important;
   text-decoration: none !important;
 }
 .horizon-hed em {
@@ -1489,12 +1488,20 @@ body {
 .proof-cap strong {
   color: #ffd4f4 !important;
 }
+.proof-section .proof-cap {
+  background: #FFADD8 !important;
+  color: #fff2f1 !important;
+}
+.proof-section .proof-cap strong {
+  color: #fff2f1 !important;
+}
 #blocking-tile .proof-cap {
-  background: #ff60b1 !important;
-  color: #ffd4f4 !important;
+  background: #FFADD8 !important;
+  color: #fff2f1 !important;
 }
 #blocking-tile .proof-cap strong {
-  color: #ffd4f4 !important;
+  background: #FFADD8 !important;
+  color: #fff2f1 !important;
 }
 .contact-hed {
   color: #f78bc5 !important;
@@ -1530,6 +1537,13 @@ body {
 #hitmeup {
   background: #E668A7 !important;
   color: #FFD4F4 !important;
+}
+
+.top-actions.contact-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-12px);
+  transition: opacity .2s ease, transform .2s ease;
 }
 @media (max-width: 768px) {
   .top-actions {
@@ -1609,6 +1623,999 @@ body {
   }
   .hero-name-wrap {
     display: none !important;
+  }
+}
+
+/* ===== DEPLOYABLE FIX PASS — JULY 22 COLOR + LAYOUT LOCK ===== */
+:root {
+  --black: #1C1410;
+  --page-bg: #F5D0F5;
+  --blush: var(--page-bg);
+  --hero-bg: #FED5E8;
+  --hero-image-bg: #FED5E8;
+  --hero-name-fill: #FF7A9E;
+  --hero-name-font: 'DM Sans', sans-serif;
+  --hero-frame-outer: #E979AC;
+  --hero-frame-inner: #FFAEF7;
+  --hero-dash: #FFAEF7;
+  --hero-copy: #FFD4F4;
+  --marquee-font: #F78BC5;
+  --marquee-dot: #F39BC9;
+  --link-accent: #FFAD8F;
+  --button-bg: #E668A7;
+  --button-text: #FFDAF5;
+  --section-cream: #FFF2F1;
+}
+
+html,
+body {
+  background: var(--page-bg) !important;
+  color: var(--black);
+}
+
+.hero,
+.hero-photo {
+  background: var(--hero-bg) !important;
+}
+
+.hero-left-block .hero-credit-name {
+  color: var(--hero-name-fill) !important;
+  font-family: var(--hero-name-font) !important;
+  font-weight: 800 !important;
+}
+
+.hero-left-block .hero-meta-line {
+  color: var(--hero-copy) !important;
+}
+
+.hero-photo {
+  border-color: var(--hero-frame-outer) !important;
+}
+
+.hero-inner-frame {
+  border-color: var(--hero-frame-inner) !important;
+}
+
+.hero-left-block::before {
+  background: var(--hero-dash) !important;
+}
+
+#brands-btn {
+  background: #F78BC5 !important;
+  color: #FFD4F4 !important;
+}
+
+#hitmeup {
+  background: #E668A7 !important;
+  color: #FFD4F4 !important;
+}
+
+.marquee-strip,
+#whodat-marquee,
+#press-marquee,
+#receipts-marquee,
+.marquee-strip--hitmeup {
+  background: #FED5E8 !important;
+}
+
+.marquee-track span,
+.marquee-track a,
+#whodat-marquee .marquee-track span,
+#reel-marquee .marquee-track span,
+#press-marquee .marquee-track a,
+#receipts-marquee .marquee-track span {
+  color: var(--marquee-font) !important;
+}
+
+.marquee-track span::after,
+.marquee-track a::after,
+#whodat-marquee .marquee-track span::after,
+#reel-marquee .marquee-track span::after,
+#press-marquee .marquee-track a::after,
+#receipts-marquee .marquee-track span::after {
+  background: var(--marquee-dot) !important;
+}
+
+.reel-section {
+  background: #FD9DAA !important;
+}
+
+#reel-marquee {
+  background: #FED5E8 !important;
+}
+
+.reel-label {
+  background: #F78BC5 !important;
+  color: #FFF2F1 !important;
+}
+
+.reel-stage,
+.title-section {
+  background: #F39BC9 !important;
+}
+
+.title-line,
+.title-quote,
+.title-quote cite {
+  color: #D0357F !important;
+}
+
+.title-line em,
+.title-quote {
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+}
+
+.about-section {
+  background: var(--section-cream) !important;
+}
+
+.brand-link,
+.about-text .brand-link,
+.whats-next-text .brand-link {
+  color: var(--link-accent) !important;
+  text-decoration: none !important;
+}
+
+.kicker {
+  display: block !important;
+  width: max-content;
+  margin: 0 0 20px 0 !important;
+  color: #F78BC5 !important;
+  text-align: left !important;
+  gap: 0 !important;
+}
+
+.kicker::before,
+.kicker::after,
+.horizon-head .kicker::before,
+.horizon-head .kicker::after,
+.about-text .kicker::before,
+.about-text .kicker::after,
+.credits-section .kicker::before,
+.credits-section .kicker::after,
+.contact-text .kicker::before,
+.contact-text .kicker::after,
+.whats-next-text .kicker::before,
+.whats-next-text .kicker::after {
+  display: none !important;
+}
+
+.credits-section {
+  background: #FED5E8 !important;
+}
+
+.credits-top,
+.credits-rows {
+  background: #FED5E8 !important;
+}
+
+.credits-hed {
+  color: #FF7B9E !important;
+}
+
+.credits-hed em {
+  color: #EA6CB5 !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+}
+
+.credits-meta,
+.credits-meta .loc {
+  color: #F78BC5 !important;
+}
+
+.cb-card,
+.cb-card.active {
+  background: #FFC9E6 !important;
+}
+
+.cb-num,
+.cb-card.active .cb-num {
+  color: #F39BC9 !important;
+}
+
+.cb-title,
+.cb-card.active .cb-title {
+  color: #E768A7 !important;
+}
+
+.cb-role,
+.cb-card.active .cb-role {
+  color: #E87BBF !important;
+}
+
+.cb-tag,
+.cb-card.active .cb-tag {
+  background: #E979AC !important;
+  color: #FFD4F4 !important;
+}
+
+.c6-section,
+.horizon-section,
+.whats-next-section {
+  background: #FED5E8 !important;
+}
+
+.c6-circuit,
+.whats-next-cta .c6-circuit {
+  background: var(--button-bg) !important;
+  color: var(--button-text) !important;
+}
+
+.c6-circuit:hover,
+.whats-next-cta .c6-circuit:hover {
+  background: #D0357F !important;
+  color: #FFD4F4 !important;
+}
+
+.horizon-head .kicker {
+  color: #F39BC9 !important;
+}
+
+.horizon-hed em {
+  color: #EA6CB5 !important;
+  font-family: 'DM Sans', sans-serif !important;
+  font-style: normal !important;
+  font-weight: 800 !important;
+}
+
+.horizon-card,
+.horizon-card:hover {
+  background: #E979AC !important;
+}
+
+.horizon-card h3,
+.horizon-card h3 a,
+.horizon-card:hover h3,
+.horizon-card:hover h3 a {
+  color: #FFD9F5 !important;
+}
+
+.horizon-card p,
+.horizon-card:hover p {
+  color: #FFD4F4 !important;
+}
+
+.proof-section {
+  background: #F1BCD7 !important;
+}
+
+.proof-grid {
+  background: #FFF2F1 !important;
+}
+
+.proof-cap,
+.proof-cap strong {
+  background: #E979AC !important;
+  color: #FFD4F4 !important;
+}
+
+.whats-next-hed,
+.whats-next-hed em {
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+  color: #FF7B9E !important;
+}
+
+.whats-next-hed {
+  letter-spacing: 0 !important;
+}
+
+.whats-next-hed em {
+  display: block !important;
+  font-size: clamp(78px, 10vw, 150px) !important;
+  line-height: .82 !important;
+  text-transform: lowercase !important;
+}
+
+.whats-next-text p.lead,
+.whats-next-text p.lead strong {
+  color: #E768A7 !important;
+}
+
+/* Contact redesign from supplied mockup assets. */
+.contact-section {
+  background: #000 !important;
+  color: #F78BC5 !important;
+  padding: clamp(52px, 7vw, 84px) clamp(28px, 5vw, 56px) 44px !important;
+  min-height: 720px;
+}
+
+.contact-redesign-inner {
+  width: min(100%, 1366px);
+  min-height: min(768px, calc(100svh - 70px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(320px, 42%) minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+  column-gap: clamp(44px, 6vw, 86px);
+  position: relative;
+}
+
+.contact-art {
+  grid-row: 1 / span 3;
+  align-self: end;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  min-height: 560px;
+  overflow: visible;
+}
+
+.contact-art img {
+  position: absolute;
+  left: clamp(-220px, -15vw, -150px);
+  bottom: 0;
+  width: clamp(760px, 72vw, 980px);
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+}
+
+.contact-copy {
+  grid-column: 2;
+  align-self: start;
+  padding-top: 0;
+}
+
+.contact-copy .kicker {
+  color: #F39BC9 !important;
+  margin-bottom: clamp(58px, 8vw, 88px) !important;
+}
+
+.contact-title {
+  font-family: 'Antonio', sans-serif;
+  font-weight: 800;
+  font-size: clamp(52px, 6.4vw, 86px);
+  line-height: .92;
+  text-transform: uppercase;
+  color: #F7A7D3;
+  max-width: 690px;
+  letter-spacing: 0;
+}
+
+.contact-title span {
+  display: block;
+  color: #E668A7;
+}
+
+.contact-form {
+  margin-top: clamp(54px, 7vw, 74px);
+  max-width: 640px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: #E668A7;
+}
+
+.contact-form .full {
+  grid-column: 1 / -1;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  border: 2px solid #E668A7;
+  border-radius: 0;
+  background: #000;
+  color: #FFD4F4;
+  padding: 12px 13px;
+  font: 700 14px/1.3 'DM Sans', sans-serif;
+  outline: none;
+}
+
+.contact-form textarea {
+  min-height: 104px;
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border-color: #F39BC9;
+}
+
+.contact-form button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  border: 0;
+  border-radius: 0;
+  background: #E668A7;
+  color: #FFD4F4;
+  padding: 14px 24px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.contact-lower {
+  grid-column: 2;
+  align-self: end;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  padding-bottom: 10px;
+}
+
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: #F39BC9 !important;
+  font-size: clamp(16px, 2vw, 22px) !important;
+  letter-spacing: 0 !important;
+  text-transform: lowercase !important;
+  word-break: normal;
+}
+
+.contact-email::before {
+  content: none;
+  display: none;
+}
+
+.contact-social-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #EA6CB5;
+}
+
+.contact-social-links a {
+  color: #EA6CB5 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+}
+
+.contact-social-links svg {
+  display: block;
+}
+
+.contact-social-links .imdb-wordmark {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+  line-height: 1;
+  letter-spacing: -.03em;
+}
+
+.fine {
+  display: none !important;
+}
+
+@media (max-width: 900px) {
+  .contact-section {
+    min-height: auto;
+    padding: 52px 22px 34px !important;
+  }
+
+  .contact-redesign-inner {
+    min-height: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    row-gap: 36px;
+  }
+
+  .contact-art,
+  .contact-copy,
+  .contact-lower {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .contact-art {
+    order: 2;
+    justify-content: center;
+    min-height: 430px;
+    overflow: hidden;
+  }
+
+  .contact-copy {
+    order: 1;
+  }
+
+  .contact-copy .kicker {
+    margin-bottom: 34px !important;
+  }
+
+  .contact-title {
+    font-size: clamp(44px, 16vw, 76px);
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+    margin-top: 34px;
+  }
+
+  .contact-lower {
+    order: 3;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 0;
+  }
+
+  .contact-art img {
+    position: static;
+    width: min(760px, 150vw);
+    transform: translateX(-14%);
+  }
+}
+
+/* ===== JULY 22 MERGED WORK/CONTACT CORRECTION ===== */
+.section-anchor {
+  position: absolute;
+  top: 0;
+}
+
+.proof-tile.vision-tile img {
+  object-position: 80% 34% !important;
+  transform: scale(1.48);
+  transform-origin: 80% 34%;
+}
+
+.proof-tile.vision-tile:hover img {
+  transform: scale(1.54) !important;
+}
+
+.whats-next-section.merged-contact-section,
+.contact-section.merged-contact-section {
+  background: #ffdaf5 !important;
+  color: #1C1410 !important;
+  padding: clamp(44px, 5vw, 68px) clamp(24px, 3.4vw, 44px) clamp(44px, 5vw, 68px) !important;
+  min-height: auto !important;
+  position: relative;
+}
+
+.merged-contact-inner {
+  width: min(100%, 1340px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(420px, 560px) minmax(520px, 1fr);
+  gap: clamp(48px, 4.5vw, 66px);
+  align-items: center;
+}
+
+.merged-contact-art {
+  align-self: center;
+  min-width: 0;
+  overflow: visible;
+}
+
+.contact-photo-stack {
+  display: grid;
+  gap: clamp(18px, 2vw, 26px);
+  align-content: start;
+  justify-items: start;
+}
+
+.contact-tanmay-card {
+  width: min(100%, 650px);
+  aspect-ratio: 1.36 / 1;
+  border: 3px solid #ea6cb5;
+  background: #ffc9eb;
+  overflow: hidden;
+  grid-column: auto !important;
+}
+
+.contact-tanmay-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 26% 42%;
+  display: block;
+}
+
+.contact-tanmay-card .proof-cap {
+  background: #ea6cb5;
+  color: #ffdaf5;
+  opacity: 1;
+  transform: none;
+}
+
+.contact-tanmay-card .proof-cap strong {
+  color: #ffdaf5;
+}
+
+.contact-cutout {
+  width: min(42vw, 560px);
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  transform: none;
+  display: block;
+}
+
+.merged-contact-copy {
+  min-width: 0;
+}
+
+.merged-contact-copy .kicker {
+  color: rgba(211, 93, 159, .48) !important;
+  margin-bottom: clamp(22px, 2.2vw, 32px) !important;
+}
+
+.merged-contact-hed {
+  margin: 0 0 clamp(28px, 3.4vw, 46px) !important;
+  color: #e668a7 !important;
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: clamp(66px, 9vw, 138px) !important;
+  line-height: .84 !important;
+  letter-spacing: 0 !important;
+  text-transform: uppercase;
+}
+
+.merged-contact-hed em {
+  display: block !important;
+  color: #ff7b9e !important;
+  font-family: 'Antonio', sans-serif !important;
+  font-weight: 800 !important;
+  font-style: normal !important;
+  font-size: clamp(78px, 10.4vw, 154px) !important;
+  line-height: .78 !important;
+  text-transform: lowercase !important;
+}
+
+.merged-contact-copy p {
+  max-width: 640px;
+  font-family: 'DM Sans', sans-serif;
+  color: #d985bd;
+}
+
+.merged-contact-copy .lead {
+  margin: 0 0 clamp(28px, 3vw, 40px);
+  padding-left: 22px;
+  border-left: 4px solid #ea6cb5;
+  color: #d864aa !important;
+  font-weight: 500;
+  font-size: clamp(18px, 1.8vw, 24px);
+  line-height: 1.48;
+}
+
+.merged-contact-copy .lead strong {
+  color: #d864aa !important;
+}
+
+.merged-contact-copy .lead .brand-link {
+  color: #e32698 !important;
+  font-weight: 800;
+  text-decoration: none !important;
+}
+
+.merged-contact-copy .contact-body {
+  color: #d985bd !important;
+  font-size: clamp(14px, 1.22vw, 17px);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.merged-contact-copy .contact-note {
+  display: none;
+}
+
+.merged-contact-section .contact-title {
+  margin: 0 0 clamp(26px, 3vw, 38px);
+  max-width: 740px;
+  color: #ffadd8;
+  font-family: 'Antonio', sans-serif;
+  font-weight: 800;
+  font-size: clamp(46px, 5.2vw, 74px);
+  line-height: .92;
+  text-transform: uppercase;
+}
+
+.merged-contact-section .contact-title span {
+  display: block;
+  color: #ea6cb5;
+}
+
+.merged-contact-section .contact-lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  max-width: 640px;
+  margin-top: clamp(30px, 3.4vw, 46px);
+}
+
+.merged-contact-section .contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: #ea6cb5 !important;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(13px, 1vw, 16px) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0 !important;
+  text-transform: lowercase !important;
+  word-break: normal;
+  text-decoration: none !important;
+}
+
+.merged-contact-section .contact-email::before {
+  content: none !important;
+  display: none !important;
+}
+
+.merged-contact-section .mail-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  color: #ea6cb5;
+}
+
+.merged-contact-section .contact-social-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  color: #ea6cb5;
+}
+
+.merged-contact-section .contact-social-links a {
+  color: #ea6cb5 !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none !important;
+}
+
+.merged-contact-section .contact-social-links .imdb-wordmark {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+  letter-spacing: -.03em;
+}
+
+@media (max-width: 1050px) {
+  .merged-contact-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .merged-contact-art {
+    order: 1;
+  }
+
+  .merged-contact-copy {
+    order: 2;
+  }
+
+  .contact-cutout {
+    width: min(520px, 100%);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 700px) {
+  .whats-next-section.merged-contact-section,
+  .contact-section.merged-contact-section {
+    padding: 58px 22px 56px !important;
+  }
+
+  .merged-contact-section .contact-lower {
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 30px;
+  }
+}
+
+/* ===== CONTACT — MOCKUP LAYOUT: arch photo + copy + horizontal form ===== */
+.ct-inner {
+  width: min(100%, 1340px);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(340px, 460px) minmax(0, 1fr);
+  column-gap: clamp(40px, 5vw, 84px);
+  row-gap: clamp(40px, 4.5vw, 62px);
+  align-items: start;
+}
+.ct-photo {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  aspect-ratio: 714 / 660;
+  overflow: hidden;
+  align-self: start;
+}
+.ct-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-position: center top;
+}
+.ct-copy {
+  grid-column: 2;
+  grid-row: 1;
+  min-width: 0;
+  align-self: center;
+}
+.ct-copy .kicker {
+  color: #db94c0 !important;
+  margin-bottom: clamp(30px, 4vw, 54px) !important;
+}
+.ct-copy .lead {
+  margin: 0 0 clamp(20px, 2.2vw, 30px);
+  padding-left: 18px;
+  border-left: 4px solid #ea6cb5;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: clamp(17px, 1.5vw, 21px);
+  line-height: 1.5;
+  color: #d05fa4;
+}
+.ct-copy .lead strong {
+  font-weight: 800;
+  color: #d05fa4;
+}
+.ct-copy .lead .brand-link {
+  color: #e32698 !important;
+  font-weight: 800;
+  text-decoration: none !important;
+}
+.ct-copy .contact-body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, 1.15vw, 16px);
+  line-height: 1.65;
+  color: #cd7cb1;
+}
+.ct-copy .contact-lower {
+  margin-top: clamp(30px, 3.4vw, 44px);
+}
+
+/* Horizontal form spanning full width below photo + copy */
+.ct-form {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(16px, 1.8vw, 24px);
+  align-items: end;
+}
+.ct-field {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+.ct-field.full {
+  grid-column: 1 / -1;
+}
+.ct-field .lbl {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #d0357f;
+}
+.ct-form input,
+.ct-form select,
+.ct-form textarea {
+  width: 100%;
+  border: 2px solid #ea6cb5;
+  border-radius: 0;
+  background: #ffeaf8;
+  color: #1c1410;
+  padding: 13px 14px;
+  font: 600 15px/1.35 'DM Sans', sans-serif;
+  outline: none;
+  transition: border-color .18s, background .18s;
+}
+.ct-form select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e668a7' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+  background-size: 16px;
+  padding-right: 38px;
+  cursor: pointer;
+}
+.ct-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.ct-form input::placeholder,
+.ct-form textarea::placeholder {
+  color: #d99cc4;
+}
+.ct-form input:focus,
+.ct-form select:focus,
+.ct-form textarea:focus {
+  border-color: #d0357f;
+  background: #fff2fb;
+}
+.ct-form button {
+  grid-column: 1 / -1;
+  justify-self: start;
+  border: 0;
+  border-radius: 0;
+  background: #e668a7;
+  color: #ffdaf5;
+  padding: 15px 32px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background .18s, color .18s;
+}
+.ct-form button:hover {
+  background: #d0357f;
+  color: #ffeaf8;
+}
+.ct-form button:disabled {
+  opacity: .6;
+  cursor: default;
+}
+.ct-status {
+  grid-column: 1 / -1;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  color: #d0357f;
+  min-height: 1em;
+}
+.contact-social-links .imdb-logo-link img {
+  height: 20px;
+  width: auto;
+  display: block;
+}
+@media (max-width: 1050px) {
+  .ct-inner {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+  .ct-photo {
+    grid-column: 1;
+    grid-row: 1;
+    order: 1;
+    width: min(420px, 100%);
+    margin: 0 auto;
+  }
+  .ct-copy {
+    grid-column: 1;
+    grid-row: 2;
+    order: 2;
+  }
+  .ct-form {
+    grid-column: 1;
+    grid-row: 3;
+    order: 3;
+  }
+}
+@media (max-width: 640px) {
+  .ct-form {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
 }
 </style>
@@ -1886,74 +2893,85 @@ body {
         <img src="official photos/Lee_Dubin02239.jpg" alt="Two shot" style="object-position:center 35%">
         <div class="proof-cap"><strong>Makeup at the monitor</strong>Teamwork, dreamwork, etc.</div>
       </div>
-      <div class="proof-tile">
-        <img src="official photos/Lee_Dubin03689.jpg" alt="Wide crew" style="object-position:center 68%">
-        <div class="proof-cap"><strong>All in the Family</strong>Drama, drama, drama.</div>
+      <div class="proof-tile vision-tile">
+        <img src="official photos/0R6A9736.JPG" alt="April directing with a tablet">
+        <div class="proof-cap"><strong>The Vision</strong>Don't worry, I have a plan.</div>
       </div>
       <div class="proof-tile" id="blocking-tile" style="grid-column: span 2;">
-        <img src="official photos/lee_dubin4642.jpg" alt="Blocking on set" style="object-position:center 40%">
-        <div class="proof-cap"><strong>Blocking</strong>Get you a girl who can do both.</div>
+        <img src="official photos/Lee_Dubin02346.jpg" alt="April Korto Quioh with DP Tanmay Chowdhary" style="object-position:26% 42%">
+        <div class="proof-cap"><strong>Making it happen</strong>with DP Tanmay Chowdhary.</div>
       </div>
     </div>
   </section>
 
-  <!-- WORK WITH ME -->
-  <section class="whats-next-section" id="workwithme">
-    <div class="whats-next-grid">
-
-      <!-- Left: Media -->
-      <div style="margin-top: 44px;">
-        <div class="whats-next-media proof-tile" style="aspect-ratio:4/3;">
-          <img src="official photos/Lee_Dubin02346.jpg" alt="April Korto Quioh with DP Tanmay Chowdhary" style="object-position: 0% 15%;">
-          <div class="proof-cap"><strong>Making it happen</strong>with DP Tanmay Chowdhary</div>
-        </div>
+  <!-- WORK + CONTACT — merged redesign -->
+  <section class="whats-next-section contact-section merged-contact-section" id="contact">
+    <span id="workwithme" class="section-anchor" aria-hidden="true"></span>
+    <div class="ct-inner">
+      <div class="ct-photo">
+        <img src="contact redesign/contact hero cropped.png" alt="April Korto Quioh">
       </div>
-
-      <!-- Right: Text Content -->
-      <div class="whats-next-text">
-        <div class="kicker">Work With Me</div>
-        <h2 class="whats-next-hed">WORK WITH <em>me.</em></h2>
-
-        <p class="lead" style="color:#e768a7;"><strong style="color:inherit;">Currently booking:</strong> shorts, music videos, experimental storytelling, <a href="https://aprilkortoquioh.com/brands" target="_blank" rel="noopener" class="brand-link">branded content</a>, and narrative projects that light me up.</p>
-
-        <p>I'm looking to collaborate and tell stories that are full of heart and find levity even in the toughest of moments. In addition to my 10+ years as a professional comedy writer, I bring along with me my lifelong commitment to having a laugh by any means necessary, my careful attention to detail, my improvisational approach to storytelling, and my consistent ability to be a 10/10 hang.</p>
-
-        <p style="color:#e768a7;font-weight:800;">The sky's the limit.</p>
-
-        <div class="whats-next-cta" style="margin-top:4px;">
-          <a href="#contact" class="c6-circuit" style="color:#ffd9f5;">let's get to work</a>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- CONTACT — from v7 -->
-  <section class="contact-section" id="contact">
-    <div class="contact-grid">
-      <div class="contact-photo">
-        <img src="official photos/DSC06035.jpg" alt="April Korto Quioh">
-      </div>
-      <div class="contact-text">
+      <div class="ct-copy">
         <div class="kicker">Get In Touch</div>
-        <h2 class="contact-hed"><span class="contact-hed-main">Hit me</span><em class="orchid-up">up.</em></h2>
-        <a class="contact-email" href="mailto:april@aprilkortoquioh.com">april@aprilkortoquioh.com</a>
+        <h2 class="contact-title">Let's make something <span>unforgettable</span></h2>
+
+        <p class="lead"><strong>Currently booking:</strong> shorts, music videos, experimental storytelling, <a href="https://aprilkortoquioh.com/brands" target="_blank" rel="noopener" class="brand-link">branded content</a>, and narrative projects that light me up.</p>
+
+        <p class="contact-body">I'm looking to collaborate and tell stories that are full of heart and find levity even in the toughest of moments. In addition to my 10+ years as a professional comedy writer, I bring along with me my lifelong commitment to having a laugh by any means necessary, my careful attention to detail, my improvisational approach to storytelling, and my consistent ability to be a 10/10 hang.</p>
+
+        <div class="contact-lower">
+          <a class="contact-email" href="mailto:april@aprilkortoquioh.com" aria-label="Email April Korto Quioh">
+            <svg class="mail-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M3.75 6.75h16.5v10.5H3.75V6.75Z" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/>
+              <path d="m4.5 7.5 7.5 6 7.5-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>april@aprilkortoquioh.com</span>
+          </a>
+          <div class="contact-social-links" aria-label="Social links">
+            <a href="https://www.instagram.com/aprilkortoquioh/" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2.4" y="2.4" width="19.2" height="19.2" rx="5"></rect><circle cx="12" cy="12" r="3.6"></circle><circle cx="17.4" cy="6.6" r="0.7" fill="currentColor" stroke="none"></circle></svg>
+            </a>
+            <a href="https://www.imdb.com/name/nm8555752/" target="_blank" rel="noopener" aria-label="IMDb" class="imdb-logo-link">
+              <img src="contact redesign/imdb-logo.png" alt="IMDb">
+            </a>
+            <a href="https://youowemeanapology.substack.com/" target="_blank" rel="noopener" aria-label="Substack">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 8.24H1.46V5.41h21.08v2.83zM1.46 10.81V24L12 18.11 22.54 24V10.81H1.46zM22.54 0H1.46v2.84h21.08V0z"></path></svg>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="social-links" style="max-width:1400px;margin:48px auto 0;display:flex;gap:20px;align-items:center;">
-      <a href="https://www.instagram.com/aprilkortoquioh/" target="_blank" rel="noopener" aria-label="Instagram" style="color:#d46da4;display:inline-flex;transition:color .2s;" onmouseover="this.style.color='#e768a7'" onmouseout="this.style.color='#d46da4'">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-      </a>
-      <a href="https://www.imdb.com/name/nm8555752/" target="_blank" rel="noopener" aria-label="IMDb" style="color:#d46da4;display:inline-flex;transition:color .2s;" onmouseover="this.style.color='#e768a7'" onmouseout="this.style.color='#d46da4'">
-        <svg width="48" height="30" viewBox="0 0 64 32" fill="currentColor"><rect x="0" y="0" width="64" height="32" rx="5"></rect><g fill="#fff" transform="translate(32,16) scale(1.32) translate(-26,-16)"><rect x="6" y="9" width="3.5" height="14"></rect><path d="M13 9h4l1.3 7L19.6 9h4v14h-3.2v-9l-1.6 9h-2.2l-1.5-9v9H13z"></path><path d="M27 9h4.2c2.6 0 3.6 1 3.6 3.4v7.2c0 2.4-1 3.4-3.6 3.4H27zm3.3 2.3v9.4c.9 0 1.2-.3 1.2-1.3v-6.8c0-1-.3-1.3-1.2-1.3z"></path><path d="M38 9h3.2v4.6c.5-.7 1.2-1 2-1 1.6 0 2.3.9 2.3 2.8v4.9c0 1.9-.7 2.8-2.3 2.8-.9 0-1.6-.4-2.1-1.1l-.2.9H38zm3.2 5.3v5.1c0 .5.2.8.6.8s.6-.3.6-.8v-5.1c0-.5-.2-.8-.6-.8s-.6.3-.6.8z"></path></g></svg>
-      </a>
-      <a href="https://youowemeanapology.substack.com/" target="_blank" rel="noopener" aria-label="Substack" style="color:#d46da4;display:inline-flex;transition:color .2s;" onmouseover="this.style.color='#e768a7'" onmouseout="this.style.color='#d46da4'">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"></path></svg>
-      </a>
-    </div>
-    <div class="fine">
-      <span>April Korto Quioh &copy; MMXXVI</span>
-      <span>Photography: Lee Dubin -- Studio: Palava Productions</span>
+
+      <form class="ct-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="966ed96c-67aa-4764-b279-d5975e13716b">
+        <input type="hidden" name="subject" value="New inquiry from aprilkortoquioh.com">
+        <input type="hidden" name="from_name" value="aprilkortoquioh.com">
+        <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="display:none" aria-hidden="true">
+        <label class="ct-field">
+          <span class="lbl">Name</span>
+          <input type="text" name="name" required autocomplete="name" placeholder="Your name">
+        </label>
+        <label class="ct-field">
+          <span class="lbl">Email</span>
+          <input type="email" name="email" required autocomplete="email" placeholder="you@email.com">
+        </label>
+        <label class="ct-field">
+          <span class="lbl">Project Type</span>
+          <select name="project_type" required>
+            <option value="" disabled selected>Choose one</option>
+            <option>Short film</option>
+            <option>Music video</option>
+            <option>Branded content</option>
+            <option>Narrative project</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label class="ct-field full">
+          <span class="lbl">What are we making?</span>
+          <textarea name="message" required placeholder="Tell me about it."></textarea>
+        </label>
+        <button type="submit">Send it &#8594;</button>
+        <div class="ct-status" id="contact-status" role="status" aria-live="polite"></div>
+      </form>
     </div>
   </section>
 
@@ -2061,6 +3079,29 @@ body {
 
     wireDismiss('brands-btn', 'brands-close');
     wireDismiss('hitmeup', 'hitmeup-close');
+
+    const actions = document.querySelector('.top-actions');
+    const contact = document.getElementById('contact');
+    if (actions && contact) {
+      function setContactHidden(hidden) {
+        actions.classList.toggle('contact-hidden', hidden);
+      }
+
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(function(entries) {
+          setContactHidden(entries.some(function(entry) { return entry.isIntersecting; }));
+        }, { threshold: 0.08 });
+        observer.observe(contact);
+      } else {
+        function checkContact() {
+          const rect = contact.getBoundingClientRect();
+          setContactHidden(rect.top < window.innerHeight && rect.bottom > 0);
+        }
+        window.addEventListener('scroll', checkContact, { passive: true });
+        window.addEventListener('resize', checkContact);
+        checkContact();
+      }
+    }
   })();
   </script>
 
@@ -2136,6 +3177,49 @@ body {
     });
     var fontsReady = document.fonts ? document.fonts.ready : Promise.resolve();
     Promise.all([domReady, fontsReady]).then(init);
+  })();
+  </script>
+
+  <!-- Contact form — Web3Forms AJAX submit with inline status -->
+  <script>
+  (function() {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    var status = document.getElementById('contact-status');
+    var button = form.querySelector('button[type="submit"]');
+    var buttonLabel = button ? button.innerHTML : '';
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      status.style.color = '#d0357f';
+      status.textContent = 'Sending…';
+      if (button) { button.disabled = true; }
+
+      var data = new FormData(form);
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: data
+      })
+      .then(function(res) { return res.json().then(function(json) { return { ok: res.ok, json: json }; }); })
+      .then(function(result) {
+        if (result.ok && result.json.success) {
+          status.style.color = '#d0357f';
+          status.textContent = "Got it — thanks! I'll be in touch soon.";
+          form.reset();
+        } else {
+          status.style.color = '#c0224f';
+          status.textContent = (result.json && result.json.message) ? result.json.message : 'Something went wrong. Please email me directly.';
+        }
+      })
+      .catch(function() {
+        status.style.color = '#c0224f';
+        status.textContent = 'Network error. Please email me directly at april@aprilkortoquioh.com.';
+      })
+      .finally(function() {
+        if (button) { button.disabled = false; button.innerHTML = buttonLabel; }
+      });
+    });
   })();
   </script>
 
