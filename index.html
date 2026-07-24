@@ -2625,6 +2625,85 @@ body {
     gap: 18px;
   }
 }
+
+/* ===== LEFT JUMP NAV (desktop only) ===== */
+.side-rail {
+  position: fixed;
+  z-index: 90;
+  top: 0;
+  bottom: 0;
+  left: max(16px, calc((100vw - 1460px) / 2 + 16px));
+  width: 54px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  pointer-events: none;
+}
+.side-rail a {
+  pointer-events: auto;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  color: #d0357f;
+  transition: color .18s ease, transform .18s ease;
+}
+.side-rail a svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.side-rail a .rail-asterisk {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.side-rail a:hover {
+  color: #e768a7;
+  transform: scale(1.14);
+}
+.side-rail a.active {
+  color: #e32698;
+  transform: scale(1.14);
+}
+.side-rail a::after {
+  content: "";
+  position: absolute;
+  left: -11px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #e32698;
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+.side-rail a { position: relative; }
+.side-rail a.active::after { opacity: 1; }
+.side-rail .rail-loc {
+  pointer-events: auto;
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(180deg);
+  margin: 0;
+  writing-mode: vertical-rl;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 800;
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #d0357f;
+  white-space: nowrap;
+}
+@media (max-width: 1024px), (orientation: portrait) {
+  .side-rail { display: none !important; }
+}
 </style>
 </head>
 <body>
@@ -2641,8 +2720,34 @@ body {
     </span>
   </div>
 
+  <!-- LEFT JUMP NAV (desktop only) -->
+  <nav class="side-rail" aria-label="Jump to section">
+    <a href="#top" data-target="top" aria-label="Top" title="Top">
+      <img class="rail-asterisk" src="OFFICIAL ASSETS/icons/asterisk.png" alt="">
+    </a>
+    <a href="#reel" data-target="reel" aria-label="Reel" title="The Reel">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10.2 8.4l5.5 3.6-5.5 3.6z"/></svg>
+    </a>
+    <a href="#about" data-target="about" aria-label="About" title="Who Dat">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.4"/><path d="M5.5 19a6.5 6.5 0 0 1 13 0"/></svg>
+    </a>
+    <a href="#credits" data-target="credits" aria-label="Credits" title="The Receipts">
+      <svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15l-2-1.4L14 21l-2-1.4L10 21l-2-1.4L6 21z"/><path d="M9 9h6M9 12.5h6M9 16h4"/></svg>
+    </a>
+    <a href="#pickme" data-target="pickme" aria-label="Pick Me" title="Pick Me">
+      <svg viewBox="0 0 24 24"><rect x="3.5" y="8.5" width="17" height="11.5" rx="1"/><path d="M3.9 8.5l2.2-3.6 3.4.8 2.2-3.4 3.4.8 2.2-3.4 3.4.8-1.4 3.6"/></svg>
+    </a>
+    <a href="#onset" data-target="onset" aria-label="On the Day" title="On the Day">
+      <svg viewBox="0 0 24 24"><path d="M4 8.5h3l1.5-2.2h7L17 8.5h3V19H4z"/><circle cx="12" cy="13.2" r="3.1"/></svg>
+    </a>
+    <a href="#contact" data-target="contact" aria-label="Contact" title="Hit Me Up">
+      <svg viewBox="0 0 24 24"><rect x="3.5" y="5.5" width="17" height="13" rx="1"/><path d="M4 6.5l8 6.2 8-6.2"/></svg>
+    </a>
+    <p class="rail-loc">Los Angeles, CA</p>
+  </nav>
+
   <!-- HERO — from v4 layout -->
-  <section class="hero">
+  <section class="hero" id="top">
     <div class="hero-photo">
       <img src="official photos/DSC04174.jpg" alt="April Korto Quioh">
       <div class="hero-inner-frame" aria-hidden="true"></div>
@@ -3227,6 +3332,32 @@ body {
         if (button) { button.disabled = false; button.innerHTML = buttonLabel; }
       });
     });
+  })();
+  </script>
+
+  <!-- Left jump-nav scroll-spy (highlights the current section) -->
+  <script>
+  (function() {
+    var rail = document.querySelector('.side-rail');
+    if (!rail) return;
+    var links = Array.prototype.slice.call(rail.querySelectorAll('a[data-target]'));
+    var secs = links
+      .map(function(a) { return { a: a, el: document.getElementById(a.getAttribute('data-target')) }; })
+      .filter(function(x) { return x.el; });
+    if (!secs.length) return;
+    function update() {
+      var line = window.innerHeight * 0.4; // detection line 40% down the viewport
+      var current = secs[0];
+      for (var i = 0; i < secs.length; i++) {
+        if (secs[i].el.getBoundingClientRect().top <= line) current = secs[i];
+        else break;
+      }
+      links.forEach(function(a) { a.classList.remove('active'); });
+      current.a.classList.add('active');
+    }
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update);
+    update();
   })();
   </script>
 

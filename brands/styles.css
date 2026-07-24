@@ -3507,8 +3507,8 @@ a:active { text-decoration: none; }
 }
 
 .closing-board .next-scene.option {
-  min-height: 760px;
-  padding: 46px clamp(24px, 6vw, 92px) 78px;
+  min-height: auto;
+  padding: 46px clamp(24px, 6vw, 92px) 40px;
   overflow: hidden;
   background: #fffaf5;
 }
