@@ -4026,7 +4026,7 @@ a:active { text-decoration: none; }
 .booking-section {
   width: min(100% - 120px, 980px);
   margin: 20px auto 24px;
-  padding: 56px 0 12px;
+  padding: 56px 0 36px;
   background: transparent;
   border: 0;
   box-shadow: none;
@@ -4072,7 +4072,7 @@ a:active { text-decoration: none; }
   .booking-section {
     width: min(100% - 32px, 680px);
     margin: 8px auto 20px;
-    padding: 42px 0 16px;
+    padding: 42px 0 32px;
   }
 
   .booking-section h2 {
