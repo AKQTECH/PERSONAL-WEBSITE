@@ -2444,9 +2444,10 @@ body {
   grid-column: 1;
   grid-row: 1;
   width: 100%;
-  aspect-ratio: 714 / 660;
+  aspect-ratio: 714 / 758;
   overflow: hidden;
-  align-self: start;
+  align-self: center;
+  background: transparent;
 }
 .ct-photo img {
   width: 100%;
@@ -2632,7 +2633,7 @@ body {
   z-index: 90;
   top: 0;
   bottom: 0;
-  left: max(10px, calc((100vw - 1544px) / 2 + 10px));
+  left: max(6px, calc((100vw - 1544px) / 2 - 6px));
   width: 54px;
   display: flex;
   flex-direction: column;
@@ -2647,7 +2648,7 @@ body {
   height: 30px;
   display: grid;
   place-items: center;
-  color: #d0357f;
+  color: #E668A7;
   transition: color .18s ease, transform .18s ease;
 }
 .side-rail a svg {
@@ -2665,11 +2666,11 @@ body {
   object-fit: contain;
 }
 .side-rail a:hover {
-  color: #e768a7;
+  color: #E668A7;
   transform: scale(1.14);
 }
 .side-rail a.active {
-  color: #e32698;
+  color: #E668A7;
   transform: scale(1.14);
 }
 .side-rail a::after {
@@ -2679,7 +2680,7 @@ body {
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #e32698;
+  background: #E668A7;
   opacity: 0;
   transition: opacity .18s ease;
 }
@@ -2698,7 +2699,7 @@ body {
   font-size: 10px;
   letter-spacing: .14em;
   text-transform: uppercase;
-  color: #d0357f;
+  color: #E668A7;
   white-space: nowrap;
 }
 @media (max-width: 1024px), (orientation: portrait) {
@@ -2723,7 +2724,7 @@ body {
   <!-- LEFT JUMP NAV (desktop only) -->
   <nav class="side-rail" aria-label="Jump to section">
     <a href="#top" data-target="top" aria-label="Top" title="Top">
-      <img class="rail-asterisk" src="OFFICIAL ASSETS/icons/asterisk.png" alt="">
+      <svg viewBox="0 0 24 24"><path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9"/></svg>
     </a>
     <a href="#reel" data-target="reel" aria-label="Reel" title="The Reel">
       <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M10.2 8.4l5.5 3.6-5.5 3.6z"/></svg>
@@ -2735,7 +2736,7 @@ body {
       <svg viewBox="0 0 24 24"><path d="M6 3h9l3 3v15l-2-1.4L14 21l-2-1.4L10 21l-2-1.4L6 21z"/><path d="M9 9h6M9 12.5h6M9 16h4"/></svg>
     </a>
     <a href="#pickme" data-target="pickme" aria-label="Pick Me" title="Pick Me">
-      <svg viewBox="0 0 24 24"><rect x="3.5" y="8.5" width="17" height="11.5" rx="1"/><path d="M3.9 8.5l2.2-3.6 3.4.8 2.2-3.4 3.4.8 2.2-3.4 3.4.8-1.4 3.6"/></svg>
+      <svg viewBox="0 0 24 24"><path d="M20.2 6 3 11l-.9-2.4c-.3-1.1.3-2.2 1.3-2.5l13.5-4c1.1-.3 2.2.3 2.5 1.3Z"/><path d="m6.2 5.3 3.1 3.9"/><path d="m12.4 3.4 3.1 4"/><path d="M3 11h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/></svg>
     </a>
     <a href="#onset" data-target="onset" aria-label="On the Day" title="On the Day">
       <svg viewBox="0 0 24 24"><path d="M4 8.5h3l1.5-2.2h7L17 8.5h3V19H4z"/><circle cx="12" cy="13.2" r="3.1"/></svg>
@@ -3021,7 +3022,7 @@ body {
     <span id="workwithme" class="section-anchor" aria-hidden="true"></span>
     <div class="ct-inner">
       <div class="ct-photo">
-        <img src="OFFICIAL ASSETS/hero photos/contact hero cropped.png" alt="April Korto Quioh">
+        <img src="OFFICIAL ASSETS/hero photos/contact-hero.png" alt="April Korto Quioh">
       </div>
       <div class="ct-copy">
         <div class="kicker">Get In Touch</div>

@@ -3913,8 +3913,8 @@ a:active { text-decoration: none; }
     gap: 6px;
     padding: 4px 8px;
     background: #e6eb95;
-    border: 1.5px solid var(--pink-border);
-    box-shadow: 4px 5px 0 rgba(244, 119, 192, .18);
+    border: 1px solid rgba(17, 17, 17, .08);
+    box-shadow: 3px 4px 0 rgba(17, 17, 17, .05);
     font: 800 10px/1 var(--font-body);
     letter-spacing: 0;
   }
@@ -4025,8 +4025,8 @@ a:active { text-decoration: none; }
 /* Version 52 Calendly hard-edge crop. */
 .booking-section {
   width: min(100% - 120px, 980px);
-  margin: 20px auto 64px;
-  padding: 56px 0 46px;
+  margin: 20px auto 24px;
+  padding: 56px 0 12px;
   background: transparent;
   border: 0;
   box-shadow: none;
@@ -4040,7 +4040,7 @@ a:active { text-decoration: none; }
   position: relative;
   width: min(100%, 660px);
   max-width: 660px;
-  height: 590px;
+  height: 510px;
   margin: 0 auto;
   padding: 0;
   overflow: hidden;
@@ -4071,8 +4071,8 @@ a:active { text-decoration: none; }
 @media (max-width: 780px) {
   .booking-section {
     width: min(100% - 32px, 680px);
-    margin: 8px auto 44px;
-    padding: 42px 0 76px;
+    margin: 8px auto 20px;
+    padding: 42px 0 16px;
   }
 
   .booking-section h2 {
@@ -4089,7 +4089,7 @@ a:active { text-decoration: none; }
   .booking-frame {
     width: 100%;
     max-width: 100%;
-    height: clamp(590px, 68vh, 632px);
+    height: clamp(540px, 62vh, 570px);
   }
 
   .booking-frame .calendly-inline-widget {
