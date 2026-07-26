@@ -2213,6 +2213,57 @@ body.tv-shutdown::before {
 .chat-icon {
   filter: drop-shadow(3px 4px 0 rgba(245, 74, 165, .12));
 }
+.teaser-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.teaser-blurb {
+  margin: 0;
+  max-width: 220px;
+  font: 500 13.5px/1.6 "IBM Plex Mono", monospace;
+  color: var(--ink);
+}
+.teaser-blurb span {
+  color: var(--hot-pink);
+  text-transform: uppercase;
+}
+.teaser-hearts {
+  display: inline-flex;
+  gap: 10px;
+  margin-left: 4px;
+}
+.teaser-hearts svg {
+  width: 30px;
+  height: 28px;
+  fill: #ffd8f5;
+  stroke: #e85aad;
+  stroke-width: 2;
+}
+.teaser-hearts svg:last-child {
+  width: 24px;
+  height: 22px;
+  transform: rotate(8deg);
+}
+.teaser-tape {
+  display: inline-block;
+  max-width: 210px;
+  padding: 9px 14px;
+  background: var(--note-chartreuse);
+  color: var(--ink);
+  font: 900 11px/1.35 var(--font-body);
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  transform: rotate(-2.5deg);
+  box-shadow: 3px 4px 0 rgba(17, 17, 17, .1);
+}
+.teaser-tape img {
+  width: 15px;
+  height: 15px;
+  vertical-align: -3px;
+  margin-left: 4px;
+}
 
 .next-scene {
   padding-bottom: 92px;
