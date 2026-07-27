@@ -1,2 +1,5 @@
 .DS_Store
 *.DS_Store
+
+# Draft — not for publishing until approved (kept on branch codex/creative-session-terms)
+/creative-session-terms/
