@@ -4150,30 +4150,3 @@ a:active { text-decoration: none; }
     height: calc(100% + 34px) !important;
   }
 }
-
-/* ===== Creative Session Terms links ===== */
-.booking-terms-note {
-  width: min(100%, 660px);
-  margin: 10px auto 22px;
-  text-align: center;
-  font: 500 15px/1.5 var(--font-body);
-  color: var(--ink);
-}
-.booking-terms-note a {
-  color: var(--hot-pink);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  font-weight: 700;
-}
-.booking-terms-note a:hover { color: #d0357f; }
-.terms-footlink {
-  margin: 6px 0 0;
-  text-align: center;
-  font: 600 12px/1.4 var(--font-body);
-  letter-spacing: .04em;
-}
-.terms-footlink a {
-  color: var(--hot-pink);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-}
